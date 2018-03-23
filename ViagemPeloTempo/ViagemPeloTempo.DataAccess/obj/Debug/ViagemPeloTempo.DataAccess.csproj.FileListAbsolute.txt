@@ -1,0 +1,7 @@
+c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo.DataAccess\bin\Debug\ViagemPeloTempo.DataAccess.dll
+c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo.DataAccess\bin\Debug\ViagemPeloTempo.DataAccess.pdb
+c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo.DataAccess\bin\Debug\ViagemPeloTempo.Models.dll
+c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo.DataAccess\bin\Debug\ViagemPeloTempo.Models.pdb
+c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo.DataAccess\obj\Debug\ViagemPeloTempo.DataAccess.csprojResolveAssemblyReference.cache
+c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo.DataAccess\obj\Debug\ViagemPeloTempo.DataAccess.dll
+c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo.DataAccess\obj\Debug\ViagemPeloTempo.DataAccess.pdb
