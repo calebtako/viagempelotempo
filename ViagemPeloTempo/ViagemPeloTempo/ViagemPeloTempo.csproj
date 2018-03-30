@@ -163,6 +163,9 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\imagens\logo.jpg" />
+    <Content Include="fonts\imagens\noticia 1.jpg" />
+    <Content Include="fonts\imagens\numero2.0.jpg" />
+    <Content Include="fonts\imagens\Número-1dino.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
@@ -197,10 +200,10 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Cadastro\IndexCad.cshtml" />
     <Content Include="Views\Login\IndexLogin.cshtml" />
+    <Content Include="Views\PagInicio\PaginaInicial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\PagInicio\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

@@ -9,7 +9,7 @@ namespace ViagemPeloTempo.Controllers
     public class PagInicioController : Controller
     {
         // GET: PagInicio
-        public ActionResult Index()
+        public ActionResult PaginaInicial()
         {
             return View();
         }
