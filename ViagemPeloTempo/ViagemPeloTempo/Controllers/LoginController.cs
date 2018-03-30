@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace ViagemPeloTempo.Controllers
 {
-    public class CadastroController : Controller
+    public class LoginController : Controller
     {
-        // GET: Cadastro
-        public ActionResult IndexCad()
+        // GET: Login
+        public ActionResult IndexLogin()
         {
             return View();
         }

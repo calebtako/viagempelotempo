@@ -1,58 +1,53 @@
-create database viagempelotempo;
-use viagempelotempo;
+use master
+go
 
-create table Fase
+create database viagempelotempo;
+go
+
+use viagempelotempo;
+go
+
+create table fase
 (
-idFase int primary key identity(1,1),
-nome varchar(100),
-numerojogadores int ,
-descricao varchar(500)
-)
+	idfase int primary key identity(1,1),
+	nome varchar(100),
+	descricao varchar(500)
+);
 
 create table questao
 (
-idquest int primary key identity(1,1),
-texto varchar(500),
-IdFase int references Fase
-)
+	idquest int primary key identity(1,1),
+	texto varchar(1000),
+	idfase int references fase
+);
 
 create table alternativa
 (
-idresp int primary key identity(1,1),
-texto varchar(500),
-certa bit,
-idquest int references questao
-)
+	idalternativa int primary key identity(1,1),
+	idquest int references questao,
+	texto varchar(1000),
+	correta bit
+);
 
-create table Jogador
+create table jogador
 (
-imagem image,
-idusuario int primary key identity(1,1),
-nomeusuario varchar(24),
-senha varchar(25),
-nick varchar(20),
-email varchar(150),
-ranqsemana int,
-ranqmes int
-)
-
-create table administrador
-(
-imagem image,
-idusuario int primary key identity(1,1),
-nomeusuario varchar(24),
-senha varchar(25),
-nick varchar(20),
-email varchar(150),
-ranqsemana int,
-ranqmes int,
-codadm int
-)
+	idjogador int primary key identity(1,1),
+	nomeusuario varchar(100),
+	senha varchar(50),
+	nick varchar(50),
+	email varchar(200),
+	imagem image,
+	administrador bit default 0
+	--ranqsemana int, --default max(ranqsemana)+1,
+	--ranqmes int --default max(ranqmes)+1
+);
 
 create table resposta
 (
-idquestao int references questao,
-idresp int references alternativa,
-idusuario int references jogador,
-constraint pk_quest_alt_usuar primary key (idquestao, idresp, idusuario)
-)
+	idjogador int references jogador,
+	idquestao int references questao,
+	idalternativa int references alternativa,
+	hora_inicio datetime not null,
+	hora_fim datetime not null,
+	constraint pk_resposta primary key (idjogador, idquestao, idalternativa)
+);
