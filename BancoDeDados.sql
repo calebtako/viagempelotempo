@@ -36,7 +36,7 @@ create table jogador
 	senha varchar(50),
 	nick varchar(50),
 	email varchar(200),
-	imagem image,
+	imagem image default 'C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\fonts\imagens\defalt.jpg',
 	administrador bit default 0
 	--ranqsemana int, --default max(ranqsemana)+1,
 	--ranqmes int --default max(ranqmes)+1
@@ -51,3 +51,5 @@ create table resposta
 	hora_fim datetime not null,
 	constraint pk_resposta primary key (idjogador, idquestao, idalternativa)
 );
+
+select * from jogador

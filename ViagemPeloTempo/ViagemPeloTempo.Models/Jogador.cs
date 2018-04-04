@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +13,8 @@ namespace ViagemPeloTempo.Models
         public string Senha { get; set; }
         public string Nick { get; set; }
         public string Email { get; set; }
-        public int RankSemana { get; set; }
-        public int RankMes { get; set; }
+        public string Imagem { get; set; }
+        public bool Administrador { get; set; }
         
     }
 }

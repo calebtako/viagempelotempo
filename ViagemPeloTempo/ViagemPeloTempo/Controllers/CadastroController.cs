@@ -4,6 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+using ViagemPeloTempo.Models;
+using ViagemPeloTempo.DataAccess;
+
+
 namespace ViagemPeloTempo.Controllers
 {
     public class CadastroController : Controller
@@ -13,5 +17,12 @@ namespace ViagemPeloTempo.Controllers
         {
             return View();
         }
+        public ActionResult Salvar(Jogador obj)
+        {
+            new JogadorDAO().Inserir(obj);
+            
+            return RedirectToAction("");
+        }
+
     }
 }

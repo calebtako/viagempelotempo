@@ -10,7 +10,7 @@ using ViagemPeloTempo.Models;
 
 namespace ViagemPeloTempo.DataAccess
 {
-    class JogadorDAO
+    public class JogadorDAO
     {
         public void Inserir(Jogador obj)
         {
@@ -21,8 +21,8 @@ namespace ViagemPeloTempo.DataAccess
                         Integrated Security=SSPI;"))
             {
                 //Criando instrução sql para inserir na tabela de estados
-                string strSQL = @"INSERT INTO Jogador (nomeusuario, senha, nick, email, ranqsemana, ranqmes) 
-                                  VALUES (@nomeusuario, @senha, @nick, @email , @ranqsemana , @ranqmes);";
+                string strSQL = @"INSERT INTO Jogador (nomeusuario, senha, nick, email) 
+                                  VALUES (@nomeusuario, @senha, @nick, @email );";
 
                 //Criando um comando sql que será executado na base de dados
                 using (SqlCommand cmd = new SqlCommand(strSQL))
@@ -33,9 +33,7 @@ namespace ViagemPeloTempo.DataAccess
                     cmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = obj.Senha;
                     cmd.Parameters.Add("@nick", SqlDbType.VarChar).Value = obj.Nick;
                     cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = obj.Email;
-                    cmd.Parameters.Add("@ranqsemana", SqlDbType.VarChar).Value = obj.RankSemana;
-                    cmd.Parameters.Add("@ranqmes", SqlDbType.VarChar).Value = obj.RankMes;
-                    
+
 
                     //Abrindo conexão com o banco de dados
                     conn.Open();

@@ -5,6 +5,5 @@ c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloT
 c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo.Models\obj\Debug\ViagemPeloTempo.Models.pdb
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.Models\bin\Debug\ViagemPeloTempo.Models.dll
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.Models\bin\Debug\ViagemPeloTempo.Models.pdb
-C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.Models\obj\Debug\ViagemPeloTempo.Models.csprojResolveAssemblyReference.cache
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.Models\obj\Debug\ViagemPeloTempo.Models.dll
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.Models\obj\Debug\ViagemPeloTempo.Models.pdb

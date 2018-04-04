@@ -10,7 +10,6 @@ namespace ViagemPeloTempo.Models
     {
         public int IdFase { get; set; }
         public string Nome { get; set; }
-        public int NumeroJogadores { get; set; }
         public string Descricao { get; set; }
     }
 }
