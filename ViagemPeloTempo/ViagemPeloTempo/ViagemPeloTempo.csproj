@@ -152,6 +152,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PagInicioController.cs" />
+    <Compile Include="Controllers\PagSelecaoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -168,6 +169,8 @@
     <Content Include="fonts\imagens\numero2.0.jpg" />
     <Content Include="fonts\imagens\Número-1dino.jpg" />
     <Content Include="fonts\imagens\olho.jpg" />
+    <Content Include="fonts\imagens\shadowcolossus1.jpg" />
+    <Content Include="fonts\imagens\shadowcolossus5.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
@@ -203,6 +206,7 @@
     <Content Include="Views\Cadastro\IndexCad.cshtml" />
     <Content Include="Views\Login\IndexLogin.cshtml" />
     <Content Include="Views\PagInicio\PaginaInicial.cshtml" />
+    <Content Include="Views\PagSelecao\PagSelecao.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

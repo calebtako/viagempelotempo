@@ -7,3 +7,4 @@ C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.Models\bin\Debug\ViagemPeloTempo.Models.pdb
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.Models\obj\Debug\ViagemPeloTempo.Models.dll
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.Models\obj\Debug\ViagemPeloTempo.Models.pdb
+C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.Models\obj\Debug\ViagemPeloTempo.Models.csprojResolveAssemblyReference.cache
