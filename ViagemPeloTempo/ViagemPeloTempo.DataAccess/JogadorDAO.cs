@@ -49,30 +49,30 @@ namespace ViagemPeloTempo.DataAccess
 
         #region PagPerfil
 
-        //public Jogador BuscarPerfil()
-        //{
-        //  using (SqlConnection conn =
-        //         new SqlConnection(@"Initial Catalog=viagempelotempo;
-        //                Data Source=localhost;
-        //                Integrated Security=SSPI;"))
-        //    {
-        //        string strSQL = @"SELECT * from Jogador where ;";
+        public Jogador BuscarPerfil(Jogador per)
+        {
+           
+            using (SqlConnection conn =
+                   new SqlConnection(@"Initial Catalog=viagempelotempo;
+                        Data Source=localhost;
+                        Integrated Security=SSPI;"))
+            {
+                cmd.Parameters.Add("@nome", SqlDbType.VarChar).Value = per.NomeUsuario;
+                string strSQL = @"SELECT * from Jogador where nomeusuario like '@nome';";
 
-        //        using (SqlCommand cmd = new SqlCommand(strSQL))
-        //        {
-        //            conn.Open();
-        //            cmd.Connection = conn;
-        //            cmd.CommandText = strSQL;
-        //            var dataReader = cmd.ExecuteReader();
-        //            var dt = new DataTable();
-        //            dt.Load(dataReader);
-
-        //            conn.Close();
-                    
-        //        }
-        //    }
-        //   // return lst;
-        //}
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandText = strSQL;
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+                    conn.Close();
+                }
+            }
+            // return lst;
+        }
 
         #endregion
     }
