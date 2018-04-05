@@ -42,6 +42,7 @@ create table jogador
 	--ranqmes int --default max(ranqmes)+1
 );
 
+
 create table resposta
 (
 	idjogador int references jogador,
@@ -52,4 +53,3 @@ create table resposta
 	constraint pk_resposta primary key (idjogador, idquestao, idalternativa)
 );
 
-select * from jogador
