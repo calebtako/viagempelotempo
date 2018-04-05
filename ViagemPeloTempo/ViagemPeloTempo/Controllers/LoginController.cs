@@ -13,10 +13,10 @@ namespace ViagemPeloTempo.Controllers
         {
             return View();
         }
-        //public ActionResult Entrar()
-        //{
+        public ActionResult Entrar()
+        {
 
-        //    return View(PaginaInicial);
-        //}
+            return RedirectToAction("PaginaInicial", "PagInicio");
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace ViagemPeloTempo.DataAccess
 {
     public class JogadorDAO
     {
+        #region Inserir
         public void Inserir(Jogador obj)
         {
             //Criando uma conexão com o banco de dados
@@ -44,5 +45,35 @@ namespace ViagemPeloTempo.DataAccess
                 }
             }
         }
+        #endregion
+
+        #region PagPerfil
+
+        //public Jogador BuscarPerfil()
+        //{
+        //  using (SqlConnection conn =
+        //         new SqlConnection(@"Initial Catalog=viagempelotempo;
+        //                Data Source=localhost;
+        //                Integrated Security=SSPI;"))
+        //    {
+        //        string strSQL = @"SELECT * from Jogador where ;";
+
+        //        using (SqlCommand cmd = new SqlCommand(strSQL))
+        //        {
+        //            conn.Open();
+        //            cmd.Connection = conn;
+        //            cmd.CommandText = strSQL;
+        //            var dataReader = cmd.ExecuteReader();
+        //            var dt = new DataTable();
+        //            dt.Load(dataReader);
+
+        //            conn.Close();
+                    
+        //        }
+        //    }
+        //   // return lst;
+        //}
+
+        #endregion
     }
 }

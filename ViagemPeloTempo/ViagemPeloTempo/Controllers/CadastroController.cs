@@ -21,7 +21,7 @@ namespace ViagemPeloTempo.Controllers
         {
             new JogadorDAO().Inserir(obj);
             
-            return RedirectToAction("");
+            return RedirectToAction("IndexLogin", "Login");
         }
 
     }
