@@ -8,10 +8,13 @@ namespace ViagemPeloTempo.Controllers
 {
     public class PagInicioController : Controller
     {
-        // GET: PagInicio
         public ActionResult PaginaInicial()
         {
             return View();
+        }
+        public ActionResult Jogar()
+        {
+            return RedirectToAction("PagSelecao", "PagSelecao");
         }
     }
 }

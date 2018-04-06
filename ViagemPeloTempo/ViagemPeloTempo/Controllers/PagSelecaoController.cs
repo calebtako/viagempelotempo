@@ -9,7 +9,7 @@ namespace ViagemPeloTempo.Controllers
     public class PagSelecaoController : Controller
     {
         // GET: PagSelecao
-        public ActionResult Index()
+        public ActionResult PagSelecao()
         {
             return View();
         }

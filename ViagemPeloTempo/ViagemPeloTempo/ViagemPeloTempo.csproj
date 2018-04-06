@@ -207,6 +207,7 @@
     <Content Include="Views\Login\IndexLogin.cshtml" />
     <Content Include="Views\PagInicio\PaginaInicial.cshtml" />
     <Content Include="Views\PagSelecao\PagSelecao.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
