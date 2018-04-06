@@ -18,5 +18,6 @@ namespace ViagemPeloTempo.Controllers
 
             return RedirectToAction("PaginaInicial", "PagInicio");
         }
+        
     }
 }

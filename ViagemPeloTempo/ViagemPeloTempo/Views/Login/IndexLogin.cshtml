@@ -1,44 +1,84 @@
 ﻿@model ViagemPeloTempo.Models.Jogador
-<div class="row">
-    <div class="col-md-12 text-center">
-        <img src="~/fonts/imagens/logo.jpg" />
-        <br />
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
         <h3>Login de Jogador</h3>
         <hr />
     </div>
-</div>
-<div class="row">
-    <div class="col-md-12">
-        <form action="@Url.Action("Entrar", "Login")" class="form-horizontal">
 
-            <div class="form-group">
-                <div class="col-md-12 text-center">
-                    @Html.LabelFor(m => m.NomeUsuario, "Nome de Usuário", new { @class = "control-label" })
-                    @Html.TextBoxFor(m => m.NomeUsuario, new { @class = "form-control" })
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-12 text-center">
-                    @Html.LabelFor(m => m.Senha, "Senha", new { @class = "control-label" })
-                    @Html.PasswordFor(m => m.Senha, new { @class = "form-control" })
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-12 text-center">
-                    <img src="~/fonts/imagens/olho.jpg" width="40" height="20"/>@Html.Label("Visualizar senha")
-                </div>
-            </div>
-            <div class="form-group">
-                <div class="col-md-12 text-right">
+@{
+    Layout = string.Empty;
+}
 
-                    <button type="submit" class="btn btn-success">Entrar</button>
-                    <button type="button" class="btn btn-info">Cadastro</button>
-                </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViagemPeloTempo</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="~/fonts/imagens/logo.jpg" />
+                <br />
             </div>
-        </form>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Login de Jogador</h3>
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form action="@Url.Action("Entrar", "Login")" c class="form-horizontal">
+
+                    <div class="form-group">
+                        <div class="col-md-4 text-center">
+                        </div>
+                        <div class="col-md-4 text-center">
+                            @Html.LabelFor(m => m.NomeUsuario, "Nome de Usuário", new { @class = "control-label" })
+                            @Html.TextBoxFor(m => m.NomeUsuario, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-4 text-center">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-4 text-center">
+                        </div>
+                        <div class="col-md-4 text-center">
+                            @Html.LabelFor(m => m.Senha, "Senha", new { @class = "control-label" })
+                            @Html.PasswordFor(m => m.Senha, new { @class = "form-control" })
+                        </div>
+                        <div class="col-md-4 text-center">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 text-center">
+                            <img src="~/fonts/imagens/olho.jpg" width="40" height="20" />@Html.Label("Visualizar senha")
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12 text-right">
+                            <button type="submit" class="btn" style="background-color: #4169E1">Entrar</button>
+                            <a href="@Url.Action("IndexCad", "Cadastro")" class="btn" style="background-color: #4682B4">Cadastro</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - ViagemPeloTempo</p>
+        </footer>
     </div>
-</div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</body>
+</html>
+

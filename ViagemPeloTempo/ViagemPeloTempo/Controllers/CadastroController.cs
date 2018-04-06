@@ -17,6 +17,7 @@ namespace ViagemPeloTempo.Controllers
         {
             return View();
         }
+
         public ActionResult Salvar(Jogador obj)
         {
             new JogadorDAO().Inserir(obj);
