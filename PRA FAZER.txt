@@ -1,0 +1,62 @@
+FEITO
+
+Documentação do software, contendo:
+o Elementos Pré-textuais (Capa V,  Listas [Figuras EP, Tabelas EP  e
+Siglas], Sumário,  Resumo v) V
+
+o Justificativa; V
+
+o Objetivo Geral V
+? Business Model Canvas V
+
+
+o Ferramentas; V 
+o Protótipos (todos); V 
+o Desenvolvimento:
+o Requisitos (funcionais v e não funcionais falta alguns) V 
+o Regras de Negócio falta alguns V 
+
+o Diagramas (Casos de uso V, classe V,  e DER Lógico V e
+, etc.);
+
+
+o Telas (todas) V 
+o Referências V
+
+NÃO FEITO
+
+Folha de Rosto,
+
+Agradecimentos,
+
+o Introdução
+
+? Sumário Executivo (Categoria, Estudo de Mercado e Demanda,
+Investimentos Previstos e Resultados Esperados)
+
+o Problematização
+
+o Referencial Teórico (Embasamento Teórico do Objeto de Pesquisa)
+
+o Objetivos Específicos 
+
+o Viabilidade Técnica e Econômica 
+
+? Cronograma
+
+o Caso de Uso Descritivo 
+
+o Implementação:
+o Arquitetura e Metodologia – (por que usar esta Arquitetura?)
+
+o Plano de teste;
+
+o Casos de teste (três principais funcionalidades);
+
+o Conclusão
+
+o Anexos
+
+ apêndices
+
+físico de banco de dados 
