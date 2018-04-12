@@ -35,7 +35,7 @@ namespace ViagemPeloTempo.Controllers
         {
             FormsAuthenticationUtil.SignOut();
 
-            return RedirectToAction("Index", "Login");
+            return RedirectToAction("IndexLogin", "Login");
         }
     }
 }
