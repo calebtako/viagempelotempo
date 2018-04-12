@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace ViagemPeloTempo.Controllers
 {
-    [Authorize]
-    public class HomeController : Controller
+    public class PerfilController : Controller
     {
-        public ActionResult Index()
+        // GET: Perfil
+        public ActionResult PagPerfil()
         {
             return View();
         }

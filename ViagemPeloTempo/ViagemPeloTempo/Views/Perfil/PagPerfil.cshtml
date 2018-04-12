@@ -1,0 +1,68 @@
+﻿@model ViagemPeloTempo.Models.Jogador
+
+
+
+<div class="row">
+    <div class="col-md-4" style="border-right: 3px solid black">
+        <form action="@Url.Action("")" class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-12">
+                    <img src="~/fonts/imagens/ftPerfil.JPG" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12 ">
+                    @Html.LabelFor(m => m.NomeUsuario, "Nome de Usuário", new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.NomeUsuario, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.LabelFor(m => m.Senha, "Senha Atual", new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.Senha, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.LabelFor(m => m.Senha, "Nova Senha", new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.Senha, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.LabelFor(m => m.Senha, "Confirmar Senha", new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.Senha, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="col-md-12 text-right">
+                <button type="submit" class="btn" style="background-color: #4169E1">Salvar Senha</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-md-8">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <div class="col-md-12 text-center" style="border-bottom: 3px solid black" >
+                    <img src="~/fonts/imagens/logo.jpg"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <h3>Dados do Usuário</h3>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <h3>Dados do Usuário</h3>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <h3>Dados do Usuário</h3>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+

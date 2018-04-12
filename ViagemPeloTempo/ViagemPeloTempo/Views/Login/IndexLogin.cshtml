@@ -15,8 +15,6 @@
 </head>
 <body>
     <div class="container">
-
-
         <div class="row">
             <div class="col-md-12 text-center">
                 <img src="~/fonts/imagens/logo.jpg" />
@@ -31,14 +29,14 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <form action="@Url.Action("Entrar", "Login")" c class="form-horizontal">
+                <form action="@Url.Action("Entrar", "Login")" class="form-horizontal">
 
                     <div class="form-group">
                         <div class="col-md-4 text-center">
                         </div>
                         <div class="col-md-4 text-center">
-                            @Html.LabelFor(m => m.NomeUsuario, "Nome de Usuário", new { @class = "control-label" })
-                            @Html.TextBoxFor(m => m.NomeUsuario, new { @class = "form-control" })
+                            @Html.LabelFor(m => m.Email, "E-mail", new { @class = "control-label" })
+                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
                         </div>
                         <div class="col-md-4 text-center">
                         </div>
