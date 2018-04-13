@@ -47,19 +47,20 @@
                         <div class="col-md-4 text-center">
                             @Html.LabelFor(m => m.Senha, "Senha", new { @class = "control-label" })
                             @Html.PasswordFor(m => m.Senha, new { @class = "form-control" })
+                            <input type="checkbox" id="visuSenha" class="text-right"/><label>Visualizar Senha</label>
                         </div>
-                        <div class="col-md-4 text-center">
+                        <div class="col-md-4 text-right">
+                            
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12 text-center">
-                            <img src="~/fonts/imagens/olho.jpg" width="40" height="20" />@Html.Label("Visualizar senha")
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-md-12 text-right">
                             <button type="submit" class="btn" style="background-color: #4169E1">Entrar</button>
-                            <a href="@Url.Action("IndexCad", "Cadastro")" class="btn" style="background-color: #4682B4">Cadastro</a>
+                            <a href="@Url.Action("IndexCad", "Cadastro")" class="btn" style="background-color: #000">Cadastro</a>
                         </div>
                     </div>
                 </form>
