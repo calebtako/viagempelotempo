@@ -38,10 +38,12 @@ create table jogador
 	email varchar(200),
 	imagem image default 'C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\fonts\imagens\defalt.jpg',
 	administrador bit default 0
+
 	--ranqsemana int, --default max(ranqsemana)+1,
 	--ranqmes int --default max(ranqmes)+1
 );
-
+insert into jogador values
+('123', '123', '123', 'email', 'C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\fonts\imagens\defalt.jpg', 0)
 
 create table resposta
 (
@@ -53,3 +55,7 @@ create table resposta
 	constraint pk_resposta primary key (idjogador, idquestao, idalternativa)
 );
 
+select * from jogador
+
+
+SELECT * FROM jogador where email = 'tgnandrade@gmail.com' and senha = '123';
