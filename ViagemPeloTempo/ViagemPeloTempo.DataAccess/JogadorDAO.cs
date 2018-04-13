@@ -44,6 +44,10 @@ namespace ViagemPeloTempo.DataAccess
 
         public Jogador Logar(Jogador obj)
         {
+            if ()
+            {
+
+            }
             //Criando uma conexão com o banco de dados
             using (SqlConnection conn = new SqlConnection(@"Initial Catalog=viagempelotempo; Data Source=localhost; Integrated Security=SSPI;"))
             {

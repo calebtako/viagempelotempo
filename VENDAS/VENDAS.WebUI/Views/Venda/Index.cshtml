@@ -1,0 +1,39 @@
+﻿@using VENDAS.Models
+<div class="row">
+    <div class="col-md-12">
+        <br />
+        <a href="@Url.Action("Cadastro", "Venda")" class="btn btn-primary">NOVA VENDA</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <br />
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">Código</th>
+                        <th style="width: 55%;">Cliente</th>
+                        <th style="width: 20%;">Data</th>
+                        <th style="width: 5%;">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Venda item in Model)
+                    {
+                        <tr>
+                            <td>@item.Codigo</td>
+                            <td>@item.Cliente</td>
+                            <td>@string.Format("{0:dd/MM/yyyy HH:mm:ss}", item.Data)</td>
+                            <td>
+                                <a href="@Url.Action("Detalhes", "Venda", new { @id = item.Id })" title="Detalhes">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

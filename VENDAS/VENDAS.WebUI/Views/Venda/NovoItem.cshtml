@@ -1,0 +1,41 @@
+﻿@using VENDAS.Models
+@model ItemVenda
+<div class="row">
+    <div class="col-md-12">
+        <h3>ITEM DE VENDA</h3>
+        <hr />
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <form action="@Url.Action("SalvarItem", "Venda")" class="form-horizontal" method="post">
+            @Html.HiddenFor(m => m.Venda.Id)
+            @Html.HiddenFor(m => m.Venda.Data)
+            @Html.HiddenFor(m => m.Venda.Codigo)
+            @Html.HiddenFor(m => m.Venda.Cliente)
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class="col-md-12">
+                    @Html.LabelFor(m => m.Produto, "Produto:", new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.Produto, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6">
+                    @Html.LabelFor(m => m.Quantidade, "Quantidade:", new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.Quantidade, "{0:N0}", new { @class = "form-control" })
+                </div>
+                <div class="col-md-6">
+                    @Html.LabelFor(m => m.ValorUnitario, "Valor Unitário:", new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.ValorUnitario, "{0:N2}", new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12 text-right">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="button" class="btn btn-default" onclick="document.location.href='@Url.Action("Cadastro", "Venda", new { @id = Model.Venda.Id })'">Cancelar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
