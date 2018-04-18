@@ -56,6 +56,3 @@ create table resposta
 );
 
 select * from jogador
-
-
-SELECT * FROM jogador where email = 'tgnandrade@gmail.com' and senha = '123';
