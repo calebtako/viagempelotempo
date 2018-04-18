@@ -14,12 +14,18 @@ create table fase
 	descricao varchar(500)
 );
 
+insert into fase values
+('Pré historia', 'Primeiro periodo historico do mundo.');
+
 create table questao
 (
 	idquest int primary key identity(1,1),
 	texto varchar(1000),
 	idfase int references fase
 );
+
+insert into questao values
+('periodo bem oko', 1);
 
 create table alternativa
 (
@@ -28,6 +34,44 @@ create table alternativa
 	texto varchar(1000),
 	correta bit
 );
+insert into alternativa values
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+(1, 'Pré historia', 1),
+
 
 create table jogador
 (
@@ -43,7 +87,7 @@ create table jogador
 	--ranqmes int --default max(ranqmes)+1
 );
 insert into jogador values
-('123', '123', '123', 'email', 'C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\fonts\imagens\defalt.jpg', 0)
+('123', '123', '123', 'email', 'C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\fonts\imagens\defalt.jpg', 0);
 
 create table resposta
 (
@@ -55,4 +99,7 @@ create table resposta
 	constraint pk_resposta primary key (idjogador, idquestao, idalternativa)
 );
 
-select * from jogador
+select * from alternativa
+
+SELECT q.texto, a.texto FROM questao as q 
+inner join alternativa as a on q.idquest = a.idquest;
