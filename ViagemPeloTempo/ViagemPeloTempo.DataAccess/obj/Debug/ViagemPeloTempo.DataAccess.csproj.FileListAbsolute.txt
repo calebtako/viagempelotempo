@@ -5,10 +5,10 @@ c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloT
 c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo.DataAccess\obj\Debug\ViagemPeloTempo.DataAccess.csprojResolveAssemblyReference.cache
 c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo.DataAccess\obj\Debug\ViagemPeloTempo.DataAccess.dll
 c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo.DataAccess\obj\Debug\ViagemPeloTempo.DataAccess.pdb
+C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.DataAccess\obj\Debug\ViagemPeloTempo.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.DataAccess\bin\Debug\ViagemPeloTempo.DataAccess.dll
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.DataAccess\bin\Debug\ViagemPeloTempo.DataAccess.pdb
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.DataAccess\bin\Debug\ViagemPeloTempo.Models.dll
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.DataAccess\bin\Debug\ViagemPeloTempo.Models.pdb
-C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.DataAccess\obj\Debug\ViagemPeloTempo.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.DataAccess\obj\Debug\ViagemPeloTempo.DataAccess.dll
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo.DataAccess\obj\Debug\ViagemPeloTempo.DataAccess.pdb

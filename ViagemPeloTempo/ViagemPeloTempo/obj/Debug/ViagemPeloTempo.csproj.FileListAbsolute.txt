@@ -55,6 +55,7 @@ c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloT
 c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo\obj\Debug\ViagemPeloTempo.csprojResolveAssemblyReference.cache
 c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo\obj\Debug\ViagemPeloTempo.dll
 c:\users\aluno\documents\visual studio 2015\Projects\ViagemPeloTempo\ViagemPeloTempo\obj\Debug\ViagemPeloTempo.pdb
+C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\obj\Debug\ViagemPeloTempo.csprojResolveAssemblyReference.cache
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\bin\ApplicationInsights.config
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\bin\roslyn\csc.exe
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -109,6 +110,5 @@ C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\bin\System.Web.WebPages.Razor.xml
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\bin\Antlr3.Runtime.pdb
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\bin\Newtonsoft.Json.xml
-C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\obj\Debug\ViagemPeloTempo.csprojResolveAssemblyReference.cache
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\obj\Debug\ViagemPeloTempo.dll
 C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\obj\Debug\ViagemPeloTempo.pdb
