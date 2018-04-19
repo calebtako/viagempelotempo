@@ -15,7 +15,12 @@ create table fase
 );
 
 insert into fase values
-('Pré historia', 'Primeiro periodo historico do mundo.');
+('Pré historia', 'Primeiro periodo historico do mundo.'),
+('Imperio romano', 'Um dos maiores imperios já existentes na historia.'),
+('Periodo feudal', 'Caracterizado pela divisão de terras.'),
+('Idade media', 'Tambem chamado de idade das trevas.')
+
+select * from fase
 
 create table questao
 (
@@ -25,9 +30,50 @@ create table questao
 );
 
 insert into questao values
-('periodo bem oko', 1);
+('A Pré-História pode ser definida como: ', 1),
+('Qual das alternativas abaixo apresenta as principais características do período da Pré-História conhecido como Paleolítico?', 1),
+('Qual das alternativas abaixo apresenta importantes características do período da Pré-História conhecido como Neolítico?', 1),
+('Qual das alternativas abaixo apresenta importantes características do período da Pré-História conhecido como Idade dos Metais?', 1),
+('No Paleolítico (Idade da Pedra Lascada) destacou-se a arte rupestre. Qual das alternativas abaixo explica o que era a arte rupestre?', 1),
+('Entre as principais mudanças ocorridas no período Neolítico podemos destacar:', 1),
+('As marcas da presença humana no Período Paleolítico podem ser vistas até hoje:', 1),
+('Nesse período, os grupos humanos viviam em estado natural, ou seja, integrados à natureza: coletavam frutos, grãos, raízes, pescavam e caçavam animais:', 1),
+('“Já se afirmou ser a Pré-História uma continuação da História Natural, havendo uma analogia entre a evolução orgânica e o progresso da cultura”.
+Sobre a Pré-História, qual das alternativas a seguir é incorreta?', 1),
 
-create table alternativa
+
+('Pré historia', 2),
+('Pré historia', 2),
+('Pré historia', 2),
+('Pré historia', 2),
+('Pré historia', 2),
+('Pré historia', 2),
+('Pré historia', 2),
+('Pré historia', 2),
+('Pré historia', 2),
+
+
+('Pré historia', 3),
+('Pré historia', 3),
+('Pré historia', 3),
+('Pré historia', 3),
+('Pré historia', 3),
+('Pré historia', 3),
+('Pré historia', 3),
+('Pré historia', 3),
+('Pré historia', 3),
+
+('Pré historia', 4),
+('Pré historia', 4),
+('Pré historia', 4),
+('Pré historia', 4),
+('Pré historia', 4),
+('Pré historia', 4),
+('Pré historia', 4),
+('Pré historia', 4),
+('Pré historia', 4),
+
+drop table alternativa
 (
 	idalternativa int primary key identity(1,1),
 	idquest int references questao,
@@ -89,7 +135,7 @@ create table jogador
 insert into jogador values
 ('123', '123', '123', 'email', 'C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\fonts\imagens\defalt.jpg', 0);
 
-create table resposta
+drop table resposta
 (
 	idjogador int references jogador,
 	idquestao int references questao,
