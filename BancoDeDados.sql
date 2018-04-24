@@ -13,7 +13,7 @@ create table fase
 	nome varchar(100),
 	descricao varchar(500)
 );
-
+go
 insert into fase values
 ('Pré historia', 'Primeiro periodo historico do mundo.'),
 ('Imperio romano', 'Um dos maiores imperios já existentes na historia.'),
@@ -21,7 +21,7 @@ insert into fase values
 ('Idade media', 'Tambem chamado de idade das trevas.')
 
 select * from fase
-
+go
 create table questao
 (
 	idquest int primary key identity(1,1),
@@ -66,8 +66,8 @@ insert into questao values
 ('Entre intelectuais católicos da Idade Média, dois tiveram grande destaque: um, no período da Alta Idade Média, e o outro, na Baixa Idade Média. Foram eles:', 4),
 ('Entre as grandes contribuições culturais que a Igreja Católica legou para a humanidade, está a arte sacra. Entre os principais exemplos de arte sacra, podemos destacar:', 4),
 ('O islamismo, ideologia difundida a partir da Alta Idade Média, em que o poder político confunde-se com o poder religioso, era dotado de certa heterogeneidade, o que pode ser constatado na existência de seitas rivais como:', 4)
-
-drop table alternativa
+go
+create table alternativa
 (
 	idalternativa int primary key identity(1,1),
 	idquest int references questao,
@@ -75,44 +75,193 @@ drop table alternativa
 	correta bit
 );
 insert into alternativa values
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
-(1, 'Pré historia', 1),
+-------------------------- fase 1 ----------------- pre historia
+---------questao 1
+(1, 'O período em que os Dinossauros dominaram o planeta.', 0),
+(1, 'O período anterior ao surgimento da escrita.', 1),
+(1, 'O período que vai do surgimento da escrita até o início da civilização grega. ', 0),
+(1, 'O período em que o ser humano vivia em cavernas, caçava com pedaços de pedras e ossos e escrevia textos em blocos de pedras', 0),
+---------questao 2
+(2, 'Os homens praticavam a agricultura e domesticavam animais.', 0),
+(2, 'Os homens viviam em casas, organizadas em vilas, o poder ficava nas mãos de um chefe.', 0),
+(2, 'Os homens faziam artefatos (ferramentas, armas, utensílios domésticos) de ferro e construíam suas casas de madeira e argila.', 0),
+(2, 'Os homens habitavam cavernas, viviam da caça de animais e coleta de vegetais, usavam instrumentos feitos com ossos e pedras lascadas.', 1),
+---------questao 3
+(3, 'O ser humano vivia em cavernas, caçava com pedaços de pedras e ossos e escrevia textos em blocos de argila.', 0),
+(3, 'A religião estava bem desenvolvida e organizada, assim como o sistema político baseado na democracia.', 0),
+(3, 'Neste período ocorreu a sedentarização com a prática da agricultura e a domesticação de animais.', 1),
+(3, 'Os seres humanos não falavam, apenas emitiam ruídos para se comunicarem.', 0),
+---------questao 4
+(4, '', 0),
+(4, '', 0),
+(4, '', 0),
+(4, '', 0),
+---------questao 5
+(5, '', 0),
+(5, '', 0),
+(5, '', 0),
+(5, '', 0),
+---------questao 6
+(6, '', 0),
+(6, '', 0),
+(6, '', 0),
+(6, '', 0),
+---------questao 7
+(7, '', 0),
+(7, '', 0),
+(7, '', 0),
+(7, '', 0),
+---------questao 8
+(8, '', 0),
+(8, '', 0),
+(8, '', 0),
+(8, '', 0),
+---------questao 9
+(9, '', 0),
+(9, '', 0),
+(9, '', 0),
+(9, '', 0),
+---------------------------------------------- fase 2 -------- imeprio romano
 
+---------questao 1
+(1, '', 0),
+(1, '', 0),
+(1, '', 0),
+(1, '', 0),
+---------questao 2
+(2, '', 0),
+(2, '', 0),
+(2, '', 0),
+(2, '', 0),
+---------questao 3
+(3, '', 0),
+(3, '', 0),
+(3, '', 0),
+(3, '', 0),
+---------questao 4
+(4, '', 0),
+(4, '', 0),
+(4, '', 0),
+(4, '', 0),
+---------questao 5
+(5, '', 0),
+(5, '', 0),
+(5, '', 0),
+(5, '', 0),
+---------questao 6
+(6, '', 0),
+(6, '', 0),
+(6, '', 0),
+(6, '', 0),
+---------questao 7
+(7, '', 0),
+(7, '', 0),
+(7, '', 0),
+(7, '', 0),
+---------questao 8
+(8, '', 0),
+(8, '', 0),
+(8, '', 0),
+(8, '', 0),
+---------questao 9
+(9, '', 0),
+(9, '', 0),
+(9, '', 0),
+(9, '', 0),
+---------------------------------------------- fase 3 --------- periodo feudal
+---------questao 1
+(1, '', 0),
+(1, '', 0),
+(1, '', 0),
+(1, '', 0),
+---------questao 2
+(2, '', 0),
+(2, '', 0),
+(2, '', 0),
+(2, '', 0),
+---------questao 3
+(3, '', 0),
+(3, '', 0),
+(3, '', 0),
+(3, '', 0),
+---------questao 4
+(4, '', 0),
+(4, '', 0),
+(4, '', 0),
+(4, '', 0),
+---------questao 5
+(5, '', 0),
+(5, '', 0),
+(5, '', 0),
+(5, '', 0),
+---------questao 6
+(6, '', 0),
+(6, '', 0),
+(6, '', 0),
+(6, '', 0),
+---------questao 7
+(7, '', 0),
+(7, '', 0),
+(7, '', 0),
+(7, '', 0),
+---------questao 8
+(8, '', 0),
+(8, '', 0),
+(8, '', 0),
+(8, '', 0),
+---------questao 9
+(9, '', 0),
+(9, '', 0),
+(9, '', 0),
+(9, '', 0),
+----------------------------------------------fase 4 ----------- Idade media
+---------questao 1
+(1, '', 0),
+(1, '', 0),
+(1, '', 0),
+(1, '', 0),
+---------questao 2
+(2, '', 0),
+(2, '', 0),
+(2, '', 0),
+(2, '', 0),
+---------questao 3
+(3, '', 0),
+(3, '', 0),
+(3, '', 0),
+(3, '', 0),
+---------questao 4
+(4, '', 0),
+(4, '', 0),
+(4, '', 0),
+(4, '', 0),
+---------questao 5
+(5, '', 0),
+(5, '', 0),
+(5, '', 0),
+(5, '', 0),
+---------questao 6
+(6, '', 0),
+(6, '', 0),
+(6, '', 0),
+(6, '', 0),
+---------questao 7
+(7, '', 0),
+(7, '', 0),
+(7, '', 0),
+(7, '', 0),
+---------questao 8
+(8, '', 0),
+(8, '', 0),
+(8, '', 0),
+(8, '', 0),
+---------questao 9
+(9, '', 0),
+(9, '', 0),
+(9, '', 0),
+(9, '', 0)     
 
+go
 create table jogador
 (
 	idjogador int primary key identity(1,1),
@@ -128,8 +277,8 @@ create table jogador
 );
 insert into jogador values
 ('123', '123', '123', 'email', 'C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\fonts\imagens\defalt.jpg', 0);
-
-drop table resposta
+go
+create table resposta
 (
 	idjogador int references jogador,
 	idquestao int references questao,
