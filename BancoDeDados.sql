@@ -28,7 +28,7 @@ create table questao
 	texto varchar(1000),
 	idfase int references fase
 );
-
+go
 insert into questao values
 ('A Pré-História pode ser definida como: ', 1),
 ('Qual das alternativas abaixo apresenta as principais características do período da Pré-História conhecido como Paleolítico?', 1),
@@ -74,6 +74,7 @@ create table alternativa
 	texto varchar(1000),
 	correta bit
 );
+go
 insert into alternativa values
 -------------------------- fase 1 ----------------- pre historia
 ---------questao 1
@@ -217,50 +218,50 @@ insert into alternativa values
 (9, 'pelo sentimento de insegurança e pessimismo diante de invasões e epidemias', 1),
 ----------------------------------------------fase 4 ----------- Idade media
 ---------questao 1
-(1, '', 0),
-(1, '', 0),
-(1, '', 0),
-(1, '', 0),
+(1, 'Havia democracia na Idade Média, pois todos podiam escolher os reis e senhores feudais.', 0),
+(1, 'O poder político e econômico estava todo concentrado nas mãos do clero católico, principalmente dos padres e monges.', 0),
+(1, 'O poder era centralizado na figura do senhor feudal que, além do poder político, possuia os poderes econômico e jurídico.', 1),
+(1, 'Com a formação das monarquias nacionais europeias na Idade Média, todo poder ficou concentrado nas mãos dos monarcas (reis), sendo que os senhores feudais ficaram sem nenhum poder nesta época.', 0),
 ---------questao 2
-(2, '', 0),
-(2, '', 0),
-(2, '', 0),
-(2, '', 0),
+(2, 'Dízimo (10% da produção), corveia (trabalho de 3 a 4 dias nas terras do senhor feudal) e imposto sobre uso da água e esgoto', 0),
+(2, 'Dízimo (10% da produção), imposto sobre o uso de armas dos cavaleiros e imposto e taxa pela circulação e uso de moedas.', 0),
+(2, 'Imposto sobre a venda e compra de todas as mercadorias, imposto sobre os animais abatidos, imposto sobre o nascimento de filhos', 0),
+(2, 'Corveia (trabalho de 3 a 4 dias nas terras do senhor feudal), talha (metade da produção) e banalidades (taxas pagas pela utilização do moinho e forno do senhor feudal).', 1),
 ---------questao 3
-(3, '', 0),
-(3, '', 0),
-(3, '', 0),
-(3, '', 0),
+(3, 'As moedas eram muito utilizadas, o artesanato era a base da economia medieval e as riquezas eram bem distribuídas entre todos os habitantes', 0),
+(3, '- A base era a agricultura, prevalecia o sistema de trocas de mercadorias (as moedas eram pouco utilizadas) e as relações comerciais com outras regiões e feudos era pequena.', 1),
+(3, 'A pecuária era a base da economia, as terras tinham pouco valor econômico e não todos os integrantes da sociedade eram isentos de impostos', 0),
+(3, 'O artesanato era a base da economia, os servos recebiam salários dos senhores feudais e as terras estavam concentradas totalmente nas mãos da Igreja Católica', 0),
 ---------questao 4
-(4, '', 0),
-(4, '', 0),
-(4, '', 0),
-(4, '', 0),
+(4, 'Várias igrejas cristãs e protestantes atuavam na Europa Medieval', 0),
+(4, 'A Igreja Católica dominava na Europa Medieval, controlando a produção cultural e tendo grande influência sobre a vida espiritual das pessoas', 1),
+(4, 'As pessoas não davam importância à religião na Idade Média, sendo que grande parte da população era composta por ateus.', 0),
+(4, 'Embora monopolizasse a vida religiosa na Idade Média, a Igreja Católica era muito aberta aos avanços científicos e manifestações culturais diversas.', 0),
 ---------questao 5
-(5, '', 0),
-(5, '', 0),
-(5, '', 0),
-(5, '', 0),
+(5, 'Na pintura, os temas religiosos predominaram, fruto da influência da Igreja Católica. Na arquitetura, prevaleceram dois estilos: românico e gótico.', 1),
+(5, 'Busca da perfeição estética e enfoque nos temas mitológicos foram duas importantes características da arte medieval', 0),
+(5, 'A arte medieval recebeu grande influência da arte egípcia, sendo que o principal pintor medieval foi Leonardo da Vinci.', 0),
+(5, 'A pintura rupestre foi a principal característica da arte na Idade Média.', 0),
 ---------questao 6
-(6, '', 0),
-(6, '', 0),
-(6, '', 0),
-(6, '', 0),
+(6, 'A sociedade feudal era semelhante ao sistema de castas', 0),
+(6, 'Os ideais de honra e fidelidade vieram das instituições dos hunos.', 0),
+(6, 'Vilões e servos estavam presos a várias obrigações, entre elas o pagamento anual de  capitação, talha e banalidades.', 1),
+(6, 'A economia do feudo era dinâmica, estando voltada para o comércio dos feudos vizinhos', 0),
 ---------questao 7
-(7, '', 0),
-(7, '', 0),
-(7, '', 0),
-(7, '', 0),
+(7, 'politeístas e monoteístas', 0),
+(7, 'sunitas e xiitas', 1),
+(7, 'cristãos e muezins', 0),
+(7, 'sunitas e cristãos', 0),
 ---------questao 8
-(8, '', 0),
-(8, '', 0),
-(8, '', 0),
-(8, '', 0),
+(8, 'São Paulo e São Boaventura', 0),
+(8, 'Santo Jerônimo e São Benedito', 0),
+(8, 'Santo Efigênio e São João Bosco', 0),
+(8, 'Santo Agostinho e São Tomás de Aquino', 1),
 ---------questao 9
-(9, '', 0),
-(9, '', 0),
-(9, '', 0),
-(9, '', 0)     
+(9, 'as mesquitas e a pintura impressionista', 0),
+(9, 'as catedrais góticas e o canto gregoriano', 1),
+(9, 'as sinagogas e o talmude', 0),
+(9, 'o yoga e a cabala', 0)     
 
 go
 create table jogador
@@ -276,6 +277,7 @@ create table jogador
 	--ranqsemana int, --default max(ranqsemana)+1,
 	--ranqmes int --default max(ranqmes)+1
 );
+go
 insert into jogador values
 ('123', '123', '123', 'email', 'C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\fonts\imagens\defalt.jpg', 0);
 go
@@ -288,7 +290,7 @@ create table resposta
 	hora_fim datetime not null,
 	constraint pk_resposta primary key (idjogador, idquestao, idalternativa)
 );
-
+go
 select * from alternativa
 
 SELECT q.texto, a.texto FROM questao as q 
