@@ -42,12 +42,10 @@ namespace ViagemPeloTempo.DataAccess
 
                     var row = dt.Rows[0];
 
-                    var questao = new Questao()
+                    var questao = new Questao
                     {
                         IdQuestao = Convert.ToInt32(row["id"]),
-                        Codigo = row["codigo"].ToString(),
-                        Cliente = row["cliente"].ToString(),
-                        Data = Convert.ToDateTime(row["data"])
+                        
                     };
 
                     return questao;
