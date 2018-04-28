@@ -16,9 +16,9 @@ go
 insert into fase values
 ('Pré historia'),
 ('Idade Antiga'),
-('Periodo feudal'),
-('Idade media'),
-('Idade comtemporanea')
+('Idade media '),
+('Idade moderna'),
+('Idade contemporanea')
 
 
 select * from fase
