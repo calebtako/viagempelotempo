@@ -57,26 +57,40 @@ a.incorporarem a cultura sumeriana, especialmente os registros da nova Iíngua s
 O texto apresenta:', 2),
 
 ------fase 3
-('Sobre a origem do Feudalismo, é correto afirmar:', 3),
-('Qual das alternativas abaixo apresenta características importantes do feudalismo?', 3),
-('Sobre a sociedade feudal é correto afirmar que:', 3),
-('Qual das alternativas abaixo apresenta importantes características da economia feudal?', 3),
-('Qual das alternativas abaixo apresenta causas do enfraquecimento do feudalismo na Europa?', 3),
+('Sobre a o sistema político-econômico na Idade Média (século V ao XV) é correto afirmar que:', 3),
+('Qual das alternativas abaixo aponta apenas os principais impostos e taxas que os servos deviam aos senhores feudais na Idade Média?', 3),
+('Sobre a economia medieval é correto afirmar que:', 3),
+('Qual das alternativas abaixo aponta características da religião na Idade Média?', 3),
+('Sobre a arte na Idade Média é correto afirmar que:', 3),
 ('Uma das características a ser reconhecida no feudalismo europeu é:', 3),
-('Podemos definir o feudalismo, do ponto de vista econômico, como um sistema baseado na produção, tendente à autossuficiência, sendo a agricultura seu principal setor. Politicamente o feudalismo caracterizava-se pela:', 3),
-('Sobre a Paz de Deus e a Trégua de Deus, estabelecidas a', 3),
-('. No âmbito da vida sociocultural, a sociedade feudal', 3),
+('O islamismo, ideologia difundida a partir da Alta Idade Média, em que o poder político confunde-se com o poder religioso, era dotado de certa heterogeneidade, o que pode ser constatado na existência de seitas rivais como:', 3),
+('Entre intelectuais católicos da Idade Média, dois tiveram grande destaque: um, no período da Alta Idade Média, e o outro, na Baixa Idade Média. Foram eles:', 3),
+('Entre as grandes contribuições culturais que a Igreja Católica legou para a humanidade, está a arte sacra. Entre os principais exemplos de arte sacra, podemos destacar:', 3),
 ----fase 4
-('Sobre a o sistema político-econômico na Idade Média (século V ao XV) é correto afirmar que:', 4),
-('Qual das alternativas abaixo aponta apenas os principais impostos e taxas que os servos deviam aos senhores feudais na Idade Média?', 4),
-('Sobre a economia medieval é correto afirmar que:', 4),
-('Qual das alternativas abaixo aponta características da religião na Idade Média?', 4),
-('Sobre a arte na Idade Média é correto afirmar que:', 4),
-('Uma das características a ser reconhecida no feudalismo europeu é:', 4),
-('Entre intelectuais católicos da Idade Média, dois tiveram grande destaque: um, no período da Alta Idade Média, e o outro, na Baixa Idade Média. Foram eles:', 4),
-('Entre as grandes contribuições culturais que a Igreja Católica legou para a humanidade, está a arte sacra. Entre os principais exemplos de arte sacra, podemos destacar:', 4),
-('O islamismo, ideologia difundida a partir da Alta Idade Média, em que o poder político confunde-se com o poder religioso, era dotado de certa heterogeneidade, o que pode ser constatado na existência de seitas rivais como:', 4)
+('O Absolutismo como forma de governo esteve presente na península Ibérica, na França e na Inglaterra, tendo impactado e influenciado as maiores economias de seu tempo. Seus pensadores mais conhecidos e suas teorias foram:',4),
+('Acerca do Absolutismo na Inglaterra, NÃO é possível afirmar que:',4),
+('A França no século XVI viveu mergulhada em uma instabilidade que envolvia aspecfitos políticos e religiosos, como foi exemplo o infame massacre da Noite de São Bartolofimeu, em 1572. Com a intenção de pacificar o país, o rei Henrique IV promulgou o Edito de Nantes pelo qual:',4),
+('As reformas protestantes do princípio do século XVI, entre outros fatores, reagiam contra a. o pensamento humanista e permitiram uma ampla revisão administrativa e doutrinária da Igreja Católica',4),
+('É comum referir-se ao calvinismo como a religião do capitalismo, pois essa crença a acreditava que o comércio das coisas sagradas, como os cargos eclesiásticos e as indulgências, traria benefícios para os fiéis e para a sociedade.',4),
+('Se um homem não trabalhar, também não comerá.
+Estas palavras de São Paulo, o Apóstolo, são mais condizentes com a ética do',4),
+('Acerca do projeto de expansão marítima dos portugueses, que resultou na chegada às terras americanas no século XVI, é INCORRETO afirmar que',4),
+('Em meio a grave conflito diplomático, em 1494, foi assinado o famoso Tratado de Tordesilhas para "dividir o mundo descoberto ou por descobrir" entre Portugal e Espanha. A partilha do mundo ultramarino, assegurada com esse acordo, garantia a Coroa portuguesa:',4),
+('"O acúmulo de capitais, a modernização da agricultura, a disponibilidade de mão de obra e de recursos naturais e a força do puritanismo ajudam a explicar o pioneirismo da _________ na Revolução lndustrial".
+BOULOS Jr, p.421
+Das opções abaixo listadas, o país que melhor preenche o espaço acima é:',4),
+
 -----fase 5
+('A I Guerra Mundial (1914-1918) provocou mudanças importantes no mapa político da Europa. Entre essas, é correto apontar a',5),
+('As relações internacionais no entre-guerras (1918-1939) foram marcadas por uma tentativa de criar um órgão internacional que teria como uma de suas funções evitar um novo conflito mundial. Essa organização ficou conhecida como:',5),
+('obre a Segunda Revolução Industrial é INCORRETO afirmar que:',5),
+('Sobre o Periodo Napoleônico é correto afirmar que:',5),
+('Em 1804, Napoleão Bonaparte recebeu o título de Imperador, mediante um plebiscito. Durante sua cerimônia de coroação, ele retirou do Papa a coroa e colocou-a em sua cabeça com as próprias mãos. Esse gesto ousado representou',5),
+('A ascensão de Napoleão Bonaparte ao poder na França representou:',5),
+('Durante a década de 1930, enquanto a Alemanha, sob liderança nazista, armava-se e preparava-se para a Guerra, outros países aderiam à "política de apaziguamento", que',5),
+('Espesso e perigoso, o Muro de Berlim separou bairros, cortou cemitérios ao meio e fechou entradas de igrejas. Existiu por 28 anos, durante os quais se estima que 125 pessoas morreram ao tentar transpô-Io. Sobre o Muro de Berlim, é correto afirmar que',5),
+('Inúmeras foram as consequências da Crise de 29. Dos itens a seguir, assinale o que NÃO está relacionado a ela:',5)
+
 go
 
 select * from questao

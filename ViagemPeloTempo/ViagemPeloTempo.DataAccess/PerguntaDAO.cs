@@ -22,7 +22,7 @@ namespace ViagemPeloTempo.DataAccess
             {
                 //Criando numero randomido de 1 a 15
                 Random random = new Random();
-                int numAle = Convert.ToInt32(random.Next(1, 15));
+                int numAle = Convert.ToInt32(random.Next(1, 9));
 
                 //Criando instrução sql para selecionar todos os registros na tabela de contatos
                 string strSQL = @"SELECT q.texto, a.texto FROM questao as q where id = " + numAle + " inner join alternativa as a on q.idquest = a.idquest;";
