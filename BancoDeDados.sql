@@ -150,100 +150,101 @@ insert into alternativa values
 (9, 'c.	O Neolítico apresentou um desenvolvimento artístico diferente do Paleolítico, através dos traços geométricos do desenho e da pintura.', 0),
 (9, 'd.	Os primeiros seres semelhantes ao homem foram os Australopitecus e o Homem de Java que eram bem mais adaptados que o Homem de Neanderthal.', 1),
 
----------------------------------------------- fase 2 -------- imeprio romano
+---------------------------------------------- fase 2 -------- Idade antiga
 
 ---------questao 1
-(10, 'O sistema político era a democracia e a sociedade dividia-se em: nobres, comerciantes e escravos.', 0),
-(10, 'O sistema político era a monarquia e a sociedade dividia-se em: patrícios (nobres proprietários de terras ) e plebeus (comerciantes, artesãos e pequenos proprietários).', 1),
-(10, 'O sistema político era o parlamentarismo e a sociedade dividia-se em: governadores, classe média e camponeses.', 0),
-(10, 'O sistema político era o presidencialismo e a sociedade dividia-se em: presidente, burguesia e servos.', 0),
+(10, '- Havia democracia na Idade Média, pois todos podiam escolher os reis e senhores feudais.', 0),
+(10, 'O poder político e econômico estava todo concentrado nas mãos do clero católico, principalmente dos padres e monges.', 0),
+(10, 'O poder era centralizado na figura do senhor feudal que, além do poder político, possuia os poderes econômico e jurídico.', 1),
+(10, 'Com a formação das monarquias nacionais europeias na Idade Média, todo poder ficou concentrado nas mãos dos monarcas (reis), sendo que os senhores feudais ficaram sem nenhum poder nesta época.', 0),
 ---------questao 2
-(11, 'Política promovida pelo imperador romano para arrecadar mais impostos, através da combrança de taxas em atividades de lazer e sobre o comércio de pão.', 0),
-(11, 'Política dos reis romanos para aumentar o comércio de pão e outros alimentos que utilizavam o trigo como matéria prima.', 0),
-(11, 'Distribuição de alimentos  e diversão como forma do imperador agradar os mais pobres, diminuindo as tensões sociais e evitando revoltas e conflitos em Roma', 1),
-(11, 'Política promovida pelos senadores romanos com objetivo de proibir o circo e a venda ilegal de pães em Roma.', 0),
+(11, 'Dízimo (10% da produção), corveia (trabalho de 3 a 4 dias nas terras do senhor feudal) e imposto sobre uso da água e esgoto', 0),
+(11, 'Dízimo (10% da produção), imposto sobre o uso de armas dos cavaleiros e imposto e taxa pela circulação e uso de moedas.', 0),
+(11, 'Imposto sobre a venda e compra de todas as mercadorias, imposto sobre os animais abatidos, imposto sobre o nascimento de filhos.', 0),
+(11, 'Corveia (trabalho de 3 a 4 dias nas terras do senhor feudal), talha (metade da produção) e banalidades (taxas pagas pela utilização do moinho e forno do senhor feudal).', 1),
 ---------questao 3
-(12, 'Artes plásticas totalmente inovadora, realização de Jogos Olímpicos e religião monoteísta (antes do cristianismo).', 0),
-(12, 'Esculturas e pinturas inspiradas na arte egípcia, realização de atividades culturais para toda população e ausência total de religião', 0),
-(12, 'Valorização da cultura africana, desvalorização total da cultura grega e religião baseada nos elementos da natureza.', 0),
-(12, 'Luta de gladiadores, esculturas inspiradas na arte grega, existência de mitos e religião politeísta (antes do cristianismo).', 1),
+(12, 'As moedas eram muito utilizadas, o artesanato era a base da economia medieval e as riquezas eram bem distribuídas entre todos os habitantes.', 0),
+(12, 'A base era a agricultura, prevalecia o sistema de trocas de mercadorias (as moedas eram pouco utilizadas) e as relações comerciais com outras regiões e feudos era pequena.', 1),
+(12, 'A pecuária era a base da economia, as terras tinham pouco valor econômico e não todos os integrantes da sociedade eram isentos de impostos.', 0),
+(12, 'O artesanato era a base da economia, os servos recebiam salários dos senhores feudais e as terras estavam concentradas totalmente nas mãos da Igreja Católica.', 0),
 ---------questao 4
-(13, 'O Império Romano entrou em crise porque todos os soldados romanos abandonaram seus postos e foram morar em cidades da Ásia e África.', 0),
-(13, 'A crise do Império Romano foi motivada pela corrupção, baixos investimentos no exército, crise agrícola e presença dos povos germânicos nas regiões de fronteiras.', 1),
-(13, 'A crise do Império Romano ocorreu em função da invasão de povos africanos.', 0),
-(13, 'O Império Romano entrou em crise, pois os papas passaram a governar todas as províncias romanas no século V', 0),
+(13, 'Várias igrejas cristãs e protestantes atuavam na Europa Medieval.', 0),
+(13, 'A Igreja Católica dominava na Europa Medieval, controlando a produção cultural e tendo grande influência sobre a vida espiritual das pessoas.', 1),
+(13, 'As pessoas não davam importância à religião na Idade Média, sendo que grande parte da população era composta por ateus', 0),
+(13, 'Embora monopolizasse a vida religiosa na Idade Média, a Igreja Católica era muito aberta aos avanços científicos e manifestações culturais diversas.', 0),
 ---------questao 5
-(14, 'O direito romano, presente até os dias de hoje na cultura do Ocidente, assim como o latim, que deu origem a língua portuguesa, francesa, italiana e espanhola.', 0),
-(14, 'A religião politeísta romana que até hoje é predominante no mundo ocidental.', 0),
-(14, 'As técnicas de construção de pirâmides e a Medicina, através do processo de mumificação de corpos.', 0),
-(14, 'A língua inglesa, a democracia e a educação voltada para as artes e cultura.', 0),
+(14, 'Na pintura, os temas religiosos predominaram, fruto da influência da Igreja Católica. Na arquitetura, prevaleceram dois estilos: românico e gótico.', 0),
+(14, 'Busca da perfeição estética e enfoque nos temas mitológicos foram duas importantes características da arte medieval.', 0),
+(14, 'A arte medieval recebeu grande influência da arte egípcia, sendo que o principal pintor medieval foi Leonardo da Vinci.', 0),
+(14, 'A pintura rupestre foi a principal característica da arte na Idade Média.', 0),
 ---------questao 6
-(15, 'aumento da produção agrícola, uma vez que os germânicos eram exímios agricultores.', 0),
-(15, 'ruralização da Europa, pois a população fugia das invasões e abrigava-se nas zonas rurais do Império', 1),
-(15, 'fortalecimento do paganismo na Europa, uma vez que parte dos povos germânicos não era cristã', 0),
-(15, 'desagregação do Império Romano do Oriente a partir da conquista de Constantinopla em 476 d.C. ', 0),
+(15, 'por sua proximidade com o Mar Mediterrâneo era muito desenvolvido o comércio marítimo.', 0),
+(15, 'o comércio de manufaturas egípcias abastecia outros povos do Mar Mediterrâneo.', 0),
+(15, 'a agricultura dependia, em grande parte, das cheias do Rio Nilo.', 1),
+(15, 'a criação de gado e a mineração eram os setores econômicos mais importantes. ', 0),
 ---------questao 7
-(16, 'As tensões geradas pelas conquistas se refletiram nas contendas políticas, criaram um clima de constantes agitações, promovendo desordens nas cidades.', 0),
-(16, 'O exército entrou em crise e deixou de ser o exército de cidadãos proprietários de terras.', 0),
-(16, 'O império romano começou a sofrer a terrível crise do trabalho escravo, base principal de sua riqueza.', 1),
-(16, 'Os soldados perderam a confiança no Estado e tornaram-se fiéis a seus generais, partilhando com eles os espólios de guerra.', 0),
+(16, 'alfabeto fonético.', 1),
+(16, 'organização estatal centralizada.', 0),
+(16, '.formação de um exército e de uma marinha de guerra profissionais.', 0),
+(16, 'religião monoteísta.', 0),
 ---------questao 8
-(17, 'foi consequência da crise econômica e da insegurança provocada pelas invasões dos bárbaros;', 1),
-(17, 'foi a causa principal da falta de escravos;', 0),
-(17, 'proporcionou ao Estado a oportunidade de cobrar mais eficientemente os impostos;', 0),
-(17, 'incentivou o crescimento do comércio;', 0),
+(17, 'incorporarem a cultura sumeriana, especialmente os registros da nova Iíngua semítica em caracteres cuneiformes', 0),
+(17, 'arregimentarem entre os caldeus, após a conquista da Babilônia, os sátrapas, administradores encarregados das províncias imperiais.', 0),
+(17, 'libertarem os judeus cativos na Babilônia, que retornaram à Palestina e reconstruíram o templo de Salomão e o culto a Iavé.', 1),
+(17, 'difundirem no Egito o culto de Ahura-Mazda, que, integrando-se às ideias religiosas egípcias, deu origem ao maniqueísmo.', 0),
 ---------questao 9
-(18, 'Lucius Quinctius Cincinnatus', 1),
-(18, 'Lucius Cornelius Sulla', 0),
-(18, 'Lucius Papirius Cursor', 0),
-(18, 'Quintus Fabius Maximus Rullianus', 0),
----------------------------------------------- fase 3 --------- periodo feudal
+(18, 'as Guerras Médicas', 0),
+(18, 'a Guerra do Peloponeso.', 1),
+(18, 'a Guerra de Tróia. ', 0),
+(18, 'a Primeira Guerra Púnica.', 0),
+---------------------------------------------- fase 3 --------- Idade media
+  
 ---------questao 1
-(19, 'Ele teve início ainda no Império Romano, durante o governo do imperador Nero.', 0),
-(19, 'Ele começou no século XV, com o início das conquistas marítimas de Portugal e Espanha.', 0),
-(19, 'Ele teve início na África durante o século V e espalhou-se pela Ásia e Europa no século VI.', 0),
-(19, 'Ele começou a se formar na Europa no século V, com a invasão do Império Romano pelos povos germânicos.', 1),
+(19, 'Havia democracia na Idade Média, pois todos podiam escolher os reis e senhores feudais.', 0),
+(19, 'O poder político e econômico estava todo concentrado nas mãos do clero católico, principalmente dos padres e monges.', 0),
+(19, 'O poder era centralizado na figura do senhor feudal que, além do poder político, possuia os poderes econômico e jurídico.', 1),
+(19, 'Com a formação das monarquias nacionais europeias na Idade Média, todo poder ficou concentrado nas mãos dos monarcas (reis), sendo que os senhores feudais ficaram sem nenhum poder nesta época.', 0),
 ---------questao 2
-(20, 'Prevalência do trabalho assalariado; poder centralizado nas mãos do monarca; uso de moedas em todos os feudos', 0),
-(20, 'Economia baseada na produção de mercadorias industrializadas; sistema de eleições para a escolha dos governantes; prevalência do trabalho servil (dos servos).', 0),
-(20, 'Poder descentralizado, feudo como principal unidade política, administrativa e econômica; prevalência do trabalho servil; agricultura como base da economia.', 1),
-(20, 'Economia dinâmica com muito contato comercial entre os feudos; poder nas mãos dos cavaleiros medievais, divisão de terras igualitárias para todos do feudo.', 0),
+(20, 'Dízimo (10% da produção), corveia (trabalho de 3 a 4 dias nas terras do senhor feudal) e imposto sobre uso da água e esgoto', 0),
+(20, 'Dízimo (10% da produção), imposto sobre o uso de armas dos cavaleiros e imposto e taxa pela circulação e uso de moedas.', 0),
+(20, 'Imposto sobre a venda e compra de todas as mercadorias, imposto sobre os animais abatidos, imposto sobre o nascimento de filhos', 0),
+(20, 'Corveia (trabalho de 3 a 4 dias nas terras do senhor feudal), talha (metade da produção) e banalidades (taxas pagas pela utilização do moinho e forno do senhor feudal).', 1),
 ---------questao 3
-(21, 'Ela era justa, pois todos possuíam os mesmo direitos e deveres.', 0),
-(21, 'Ela era dinâmica, pois era muito fácil uma pessoa passar de uma camada para outra superior.', 0),
-(21, 'A maior parte da sociedade era composta por nobres (reis, senhores feudais, cavaleiros).', 0),
-(21, 'Ela era hierarquizada e com pouca mobilidade social. Havia os que trabalhavam (servos camponeses), os que oravam (clero) e os que guerreavam (nobreza).', 1),
+(21, 'As moedas eram muito utilizadas, o artesanato era a base da economia medieval e as riquezas eram bem distribuídas entre todos os habitantes', 0),
+(21, '- A base era a agricultura, prevalecia o sistema de trocas de mercadorias (as moedas eram pouco utilizadas) e as relações comerciais com outras regiões e feudos era pequena.', 1),
+(21, 'A pecuária era a base da economia, as terras tinham pouco valor econômico e não todos os integrantes da sociedade eram isentos de impostos', 0),
+(21, 'O artesanato era a base da economia, os servos recebiam salários dos senhores feudais e as terras estavam concentradas totalmente nas mãos da Igreja Católica', 0),
 ---------questao 4
-(22, 'A base era a agricultura e as relações comerciais ocorriam, principalmente, através do sistema de trocas.', 1),
-(22, 'A base era o artesanato e as relações comerciais ocorriam, principalmente, através do sistema monetário (uso de moedas).', 0),
-(22, 'A economia era controlada pelos servos, que detinham quase toda a riqueza da Europa na época feudal', 0),
-(22, 'A terra tinha pouco valor, pois o comércio era a base da economia feudal.', 0),
+(22, 'Várias igrejas cristãs e protestantes atuavam na Europa Medieval', 0),
+(22, 'A Igreja Católica dominava na Europa Medieval, controlando a produção cultural e tendo grande influência sobre a vida espiritual das pessoas', 1),
+(22, 'As pessoas não davam importância à religião na Idade Média, sendo que grande parte da população era composta por ateus.', 0),
+(22, 'Embora monopolizasse a vida religiosa na Idade Média, a Igreja Católica era muito aberta aos avanços científicos e manifestações culturais diversas.', 0),
 ---------questao 5
-(23, 'A Revolução Industrial do século XVIII fez com que o feudalismo perde-se força em quase toda Europa.', 0),
-(23, 'O renascimento comercial, impulsionado pelas Cruzadas, deu início ao enfraquecimento do feudalismo no século XII.', 1),
-(23, 'A influência da Igreja Católica na política foi a principal causa do enfraquecimento e fim do feudalismo', 0),
-(23, 'A Reforma Protestante fez com que muitos senhores feudais abandonassem o poder, transferindo-o para os monarcas. ', 0),
+(23, 'Na pintura, os temas religiosos predominaram, fruto da influência da Igreja Católica. Na arquitetura, prevaleceram dois estilos: românico e gótico.', 1),
+(23, 'Busca da perfeição estética e enfoque nos temas mitológicos foram duas importantes características da arte medieval', 0),
+(23, 'A arte medieval recebeu grande influência da arte egípcia, sendo que o principal pintor medieval foi Leonardo da Vinci.', 0),
+(23, 'A pintura rupestre foi a principal característica da arte na Idade Média.', 0),
 ---------questao 6
-(24, 'A sociedade feudal era semelhante ao sistema de castas.', 0),
+(24, 'A sociedade feudal era semelhante ao sistema de castas', 0),
 (24, 'Os ideais de honra e fidelidade vieram das instituições dos hunos.', 0),
-(24, 'Vilões e servos estavam presos a várias obrigações, entre elas, o pagamento anual de capitação, talha e banalidades.', 1),
-(24, 'A economia do feudo era dinâmica, estando voltada para o comércio dos feudos vizinhos.', 0),
+(24, 'Vilões e servos estavam presos a várias obrigações, entre elas o pagamento anual de  capitação, talha e banalidades.', 1),
+(24, 'A economia do feudo era dinâmica, estando voltada para o comércio dos feudos vizinhos', 0),
 ---------questao 7
-(25, 'existência de legislação específica a reger a vida de cada feudo', 0),
-(25, 'atribuição do poder executivo à igreja.', 0),
-(25, 'relação direta entre posse e soberania dos feudos, fragmentando assim o poder central', 1),
-(25, 'absoluta descentralização administrativa', 0),
+(25, 'politeístas e monoteístas', 0),
+(25, 'sunitas e xiitas', 1),
+(25, 'cristãos e muezins', 0),
+(25, 'sunitas e cristãos', 0),
 ---------questao 8
-(26, 'eram tentativas de os poderes eclesiásticos controlarem as ações da nobreza', 1),
-(26, 'representaram uma política de tolerância religiosa com relação aos judeus e bizantinos.', 0),
-(26, 'eram movimentos inspirados nas pregações de São Francisco de Assis', 0),
-(26, 'eram formas de reação às ações militares desenvolvidas na Península Ibérica', 0),
+(26, 'São Paulo e São Boaventura', 0),
+(26, 'Santo Jerônimo e São Benedito', 0),
+(26, 'Santo Efigênio e São João Bosco', 0),
+(26, 'Santo Agostinho e São Tomás de Aquino', 1),
 ---------questao 9
-(27, 'pelo patriarcalismo dos senhores, que deveriam defender e sustentar seus escravos', 0),
-(27, 'pela predominância de uma atitude laica e humanista diante da vida e do mundo.', 0),
-(27, 'pelas relações individualistas, geradas pelo desenvolvimento urbano e comercial', 0),
-(27, 'pelo sentimento de insegurança e pessimismo diante de invasões e epidemias', 1),
-----------------------------------------------fase 4 ----------- Idade media
+(27, 'as mesquitas e a pintura impressionista', 0),
+(27, 'as catedrais góticas e o canto gregoriano', 1),
+(27, 'as sinagogas e o talmude', 0),
+(27, 'o yoga e a cabala', 0),
+----------------------------------------------fase 4 ----------- Idade moderna
 ---------questao 1
 (28, 'Havia democracia na Idade Média, pois todos podiam escolher os reis e senhores feudais.', 0),
 (28, 'O poder político e econômico estava todo concentrado nas mãos do clero católico, principalmente dos padres e monges.', 0),
@@ -288,7 +289,55 @@ insert into alternativa values
 (36, 'as mesquitas e a pintura impressionista', 0),
 (36, 'as catedrais góticas e o canto gregoriano', 1),
 (36, 'as sinagogas e o talmude', 0),
-(36, 'o yoga e a cabala', 0)     
+(36, 'o yoga e a cabala', 0),
+
+---------------------------------fase 5-----------idade comtemporanea
+---------questao 1
+(37, 'Havia democracia na Idade Média, pois todos podiam escolher os reis e senhores feudais.', 0),
+(37, 'O poder político e econômico estava todo concentrado nas mãos do clero católico, principalmente dos padres e monges.', 0),
+(37, 'O poder era centralizado na figura do senhor feudal que, além do poder político, possuia os poderes econômico e jurídico.', 1),
+(37, 'Com a formação das monarquias nacionais europeias na Idade Média, todo poder ficou concentrado nas mãos dos monarcas (reis), sendo que os senhores feudais ficaram sem nenhum poder nesta época.', 0),
+---------questao 2
+(38, 'Dízimo (10% da produção), corveia (trabalho de 3 a 4 dias nas terras do senhor feudal) e imposto sobre uso da água e esgoto', 0),
+(38, 'Dízimo (10% da produção), imposto sobre o uso de armas dos cavaleiros e imposto e taxa pela circulação e uso de moedas.', 0),
+(38, 'Imposto sobre a venda e compra de todas as mercadorias, imposto sobre os animais abatidos, imposto sobre o nascimento de filhos', 0),
+(38, 'Corveia (trabalho de 3 a 4 dias nas terras do senhor feudal), talha (metade da produção) e banalidades (taxas pagas pela utilização do moinho e forno do senhor feudal).', 1),
+---------questao 3
+(39, 'As moedas eram muito utilizadas, o artesanato era a base da economia medieval e as riquezas eram bem distribuídas entre todos os habitantes', 0),
+(39, '- A base era a agricultura, prevalecia o sistema de trocas de mercadorias (as moedas eram pouco utilizadas) e as relações comerciais com outras regiões e feudos era pequena.', 1),
+(39, 'A pecuária era a base da economia, as terras tinham pouco valor econômico e não todos os integrantes da sociedade eram isentos de impostos', 0),
+(39, 'O artesanato era a base da economia, os servos recebiam salários dos senhores feudais e as terras estavam concentradas totalmente nas mãos da Igreja Católica', 0),
+---------questao 4
+(40, 'Várias igrejas cristãs e protestantes atuavam na Europa Medieval', 0),
+(40, 'A Igreja Católica dominava na Europa Medieval, controlando a produção cultural e tendo grande influência sobre a vida espiritual das pessoas', 1),
+(40, 'As pessoas não davam importância à religião na Idade Média, sendo que grande parte da população era composta por ateus.', 0),
+(40, 'Embora monopolizasse a vida religiosa na Idade Média, a Igreja Católica era muito aberta aos avanços científicos e manifestações culturais diversas.', 0),
+---------questao 5
+(41, 'Na pintura, os temas religiosos predominaram, fruto da influência da Igreja Católica. Na arquitetura, prevaleceram dois estilos: românico e gótico.', 1),
+(41, 'Busca da perfeição estética e enfoque nos temas mitológicos foram duas importantes características da arte medieval', 0),
+(41, 'A arte medieval recebeu grande influência da arte egípcia, sendo que o principal pintor medieval foi Leonardo da Vinci.', 0),
+(41, 'A pintura rupestre foi a principal característica da arte na Idade Média.', 0),
+---------questao 6
+(42, 'A sociedade feudal era semelhante ao sistema de castas', 0),
+(42, 'Os ideais de honra e fidelidade vieram das instituições dos hunos.', 0),
+(42, 'Vilões e servos estavam presos a várias obrigações, entre elas o pagamento anual de  capitação, talha e banalidades.', 1),
+(42, 'A economia do feudo era dinâmica, estando voltada para o comércio dos feudos vizinhos', 0),
+---------questao 7
+(43, 'politeístas e monoteístas', 0),
+(43, 'sunitas e xiitas', 1),
+(43, 'cristãos e muezins', 0),
+(43, 'sunitas e cristãos', 0),
+---------questao 8
+(44, 'São Paulo e São Boaventura', 0),
+(44, 'Santo Jerônimo e São Benedito', 0),
+(44, 'Santo Efigênio e São João Bosco', 0),
+(44, 'Santo Agostinho e São Tomás de Aquino', 1),
+---------questao 9
+(45, 'as mesquitas e a pintura impressionista', 0),
+(45, 'as catedrais góticas e o canto gregoriano', 1),
+(45, 'as sinagogas e o talmude', 0),
+(45, 'o yoga e a cabala', 0)   
+  
 select * from alternativa
 go
 create table jogador
