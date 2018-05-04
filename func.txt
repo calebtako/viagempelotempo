@@ -1,0 +1,4 @@
+espaço de imagens com a sequencia;
+botoes com troca de texto;
+redirecionar para pagina de estudo;
+**troca de senha 

@@ -20,7 +20,7 @@ insert into fase values
 ('Idade moderna'),
 ('Idade contemporanea')
 
-
+go
 select * from fase
 go
 create table questao
