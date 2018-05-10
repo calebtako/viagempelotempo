@@ -23,6 +23,7 @@ namespace ViagemPeloTempo.Controllers
             if (jogadorLogado == null)
             {
                 return View("IndexLogin");
+                <TimeSpan 
             }
 
             var userData = new JavaScriptSerializer().Serialize(jogadorLogado);
