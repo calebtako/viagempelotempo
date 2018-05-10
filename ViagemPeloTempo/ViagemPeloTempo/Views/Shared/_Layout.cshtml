@@ -6,9 +6,24 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style type="text/css">
+        .navbar-azul {
+            background-color: #1e27d1;
+            border-color: #1e27d1;
+            color: white !important;
+        }
+
+        div.navbar-header > a {
+            color: white !important;
+        }
+
+        ul.nav > li > a {
+            color: white !important;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-azul navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
