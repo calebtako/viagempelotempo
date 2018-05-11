@@ -20,6 +20,7 @@ namespace ViagemPeloTempo.Controllers
 
         public ActionResult Salvar(Jogador obj)
         {
+            
             new JogadorDAO().Inserir(obj);
             
             return RedirectToAction("IndexLogin", "Login");
