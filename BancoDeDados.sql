@@ -26,10 +26,12 @@ go
 create table questao
 (
 	idquest int primary key identity(1,1),
-	texto varchar(1000),
+	texto text,
 	idfase int references fase
 );
 go
+select * from questao where idquest = 36
+
 insert into questao values
 ----fase 1
 ('A Pré-História pode ser definida como: ', 1),
@@ -50,12 +52,10 @@ insert into questao values
 ('Em relação à economia do Antigo Egito é correto afirmar que:', 2),
 (' Dentre os povos da Antiguidade Oriental, um se destacou como de exímios navegadores e excelentes comerciantes. Eram os fenícios, cuja principal contribuição legada às civilizações posteriores foi o (a):', 2),
 (' Na Antiguidade, durante o reinado de Ciro I (559-529 a.C.), os persas construíram um vasto império e governaram diferentes povos, adotando uma política que respeitava as diferenças culturais e religiosas. Esse modo de proceder está exemplificado no fato de
-a.incorporarem a cultura sumeriana, especialmente os registros da nova Iíngua semítica em caracteres cuneiformes.
-', 2),
+a.incorporarem a cultura sumeriana, especialmente os registros da nova Iíngua semítica em caracteres cuneiformes.', 2),
 (' "Quando diminuiu a ameaça persa, o ódio ao imperialismo ateniense cresceu particularmente entre os espartanos e seus aliados, que criaram (...) uma força militar terrestre, e se decidiram pela guerra por sentirem sua independência ameaçada pelo imperialismo de Atenas. A guerra representou o suicídio da Grécia das pólis independentes".
 (Flavio de Campos e Renan Garcia Miranda, "Oficina de História - história integrada")
 O texto apresenta:', 2),
-
 ------fase 3
 ('Sobre a o sistema político-econômico na Idade Média (século V ao XV) é correto afirmar que:', 3),
 ('Qual das alternativas abaixo aponta apenas os principais impostos e taxas que os servos deviam aos senhores feudais na Idade Média?', 3),
@@ -98,7 +98,7 @@ create table alternativa
 (
 	idalternativa int primary key identity(1,1),
 	idquest int references questao,
-	texto varchar(1000),
+	texto text,
 	correta bit
 );
 go
@@ -371,3 +371,5 @@ select * from alternativa
 
 SELECT q.texto, a.texto FROM questao as q 
 inner join alternativa as a on q.idquest = a.idquest;
+
+
