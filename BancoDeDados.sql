@@ -30,8 +30,6 @@ create table questao
 	idfase int references fase
 );
 go
-select * from questao where idquest = 36
-
 insert into questao values
 ----fase 1
 ('A Pré-História pode ser definida como: ', 1),
@@ -93,7 +91,8 @@ Das opções abaixo listadas, o país que melhor preenche o espaço acima é:',4
 
 go
 
-select * from questao
+--select * from questao
+--go
 create table alternativa
 (
 	idalternativa int primary key identity(1,1),
