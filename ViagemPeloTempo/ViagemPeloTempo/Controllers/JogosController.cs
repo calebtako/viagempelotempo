@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace ViagemPeloTempo.Controllers
 {
+    [Authorize]
     public class JogosController : Controller
     {
         // GET: Jogos

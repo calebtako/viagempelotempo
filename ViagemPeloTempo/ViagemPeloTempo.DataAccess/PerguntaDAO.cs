@@ -44,15 +44,9 @@ namespace ViagemPeloTempo.DataAccess
                     if (dt == null || dt.Rows.Count <= 0)
                         return null;
 
-                    var row = dt.Rows[0];
+                   
 
-                    var questao = new Questao()
-                    {
-                        IdQuest = Convert.ToInt32(row["id"]),
-                        
-                    };
-
-                    return questao;
+                    return null;
                 }
             }
 
