@@ -20,9 +20,10 @@ namespace ViagemPeloTempo.DataAccess
                                     Data Source=localhost;
                                     Integrated Security=SSPI;"))
             {
-                //Criando numero randomido de 1 a 15
+                //Criando numero randomido de 1 a 36
                 Random random = new Random();
-                int numAle = Convert.ToInt32(random.Next(1, 9));
+                int numAle = Convert.ToInt32(random.Next(1, 36));
+
 
                 //Criando instrução sql para selecionar todos os registros na tabela de contatos
                 string strSQL = @"SELECT q.texto, a.texto FROM questao as q where id = " + numAle + " inner join alternativa as a on q.idquest = a.idquest;";

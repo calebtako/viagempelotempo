@@ -217,7 +217,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Rank\RankJ.cshtml" />
     <Content Include="Views\Perfil\PagPerfil.cshtml" />
-    <Content Include="Views\Jogos\PagJogo.cshtml" />
+    <Content Include="Views\Jogos\PagJogoP.cshtml" />
+    <Content Include="Views\Jogos\PagJogoA.cshtml" />
+    <Content Include="Views\Jogos\PagJogoMe.cshtml" />
+    <Content Include="Views\Jogos\PagJogoMo.cshtml" />
+    <Content Include="Views\Jogos\PagJogoC.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
