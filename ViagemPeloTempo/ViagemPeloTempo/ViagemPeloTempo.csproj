@@ -177,6 +177,7 @@
     <Content Include="fonts\imagens\olho.jpg" />
     <Content Include="fonts\imagens\shadowcolossus1.jpg" />
     <Content Include="fonts\imagens\shadowcolossus5.jpg" />
+    <Content Include="fonts\imagens\Sky94.png" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
