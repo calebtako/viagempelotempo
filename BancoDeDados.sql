@@ -366,6 +366,8 @@ create table resposta
 	constraint pk_resposta primary key (idjogador, idquestao, idalternativa)
 );
 go
+
+
 select * from alternativa
 
 SELECT q.texto, a.texto FROM questao as q 
