@@ -11,5 +11,12 @@ namespace ViagemPeloTempo.Models
         public int IdQuest { get; set; }
         public string Texto { get; set; }
         public Fase IdFase { get; set; }
+
+        public List<Alternativa> Alternativas { get; set; }
+
+        public Questao()
+        {
+            this.Alternativas = new List<Alternativa>();
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Data.Sql;
 using System.Data;
 using ViagemPeloTempo.Models;
+using System.Collections;
 
 namespace ViagemPeloTempo.DataAccess
 {
@@ -22,7 +23,7 @@ namespace ViagemPeloTempo.DataAccess
             {
                 //Criando numero randomido de 1 a 36
                 Random random = new Random();
-                int numAle = Convert.ToInt32(random.Next(1, 36));
+                int numAle = Convert.ToInt32(random.Next(1, 45));
 
 
                 //Criando instrução sql para selecionar todos os registros na tabela de contatos
@@ -44,8 +45,22 @@ namespace ViagemPeloTempo.DataAccess
 
                     if (dt == null || dt.Rows.Count <= 0)
                         return null;
+                    var rowQuestao = dt.Rows[0];
+                    var questao = new Questao()
+                    {
+                        Texto = rowQuestao[("q.texto")].ToString()
+                        //....dt.Rows[0]
+                    };
+                    var mQ = questao.Texto.ToString(); 
 
-                   
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        questao.Alternativas.Add(new Alternativa()
+                        {
+                            Texto = row[("a.texto")].ToString()
+                        });
+                    }
+
 
                     return null;
                 }
