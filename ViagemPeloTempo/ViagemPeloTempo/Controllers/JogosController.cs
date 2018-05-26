@@ -17,7 +17,7 @@ namespace ViagemPeloTempo.Controllers
         public ActionResult PagJogoA()
         {
             
-            return View(new Questao { Texto = "adsjhan"});
+            return View();
         }
 
         public ActionResult PagJogoC()
