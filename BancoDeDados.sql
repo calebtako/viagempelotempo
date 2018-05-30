@@ -373,4 +373,7 @@ select * from alternativa
 SELECT q.texto, a.texto FROM questao as q 
 inner join alternativa as a on q.idquest = a.idquest;
 
+SELECT q.texto, a.texto FROM questao as q  
+inner join alternativa as a on q.idquest = a.idquest 
+where q.idquest = 10;
 

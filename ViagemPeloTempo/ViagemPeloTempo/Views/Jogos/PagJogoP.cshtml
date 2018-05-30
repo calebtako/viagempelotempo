@@ -15,24 +15,15 @@
                 <img src="~/fonts/imagens/Sky94.png" id="imagemFundo" height="600" width="1000" />
             </div>
             <div class="form-group">
-                @Html.Label("lblTexto", string.Format("{0}", Model.Texto), new { @class="label-control"})
+                @Html.Label("lblTexto", string.Format("{0}", Model.Texto), new { @class = "label-control" })
             </div>
-            <div class="form-group">
-                @* texto da alternativa 1 *@
-                <input type="radio" name="alt" />
-            </div>
-            <div class="form-group">
-                @* texto da alternativa 2 *@
-                <input type="radio" name="alt" />
-            </div>
-            <div class="form-group">
-                @* texto da alternativa 3 *@
-                <input type="radio" name="alt" />
-            </div>
-            <div class="form-group">
-                @* texto da alternativa 4 *@
-                <input type="radio" name="alt" />
-            </div>
+            @foreach (var item in Model.Alternativas)
+            {
+                <div class="form-group">
+                    <input type="radio" name="alt" />
+                    @Html.Label("lblalt" + item.Id, string.Format("{0}", item.Texto), new { @class = "label-control" })
+                </div>
+            }
             <div class="form-group">
                 <button>Salvar</button>
             </div>

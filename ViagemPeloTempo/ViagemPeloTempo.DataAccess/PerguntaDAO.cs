@@ -13,7 +13,7 @@ namespace ViagemPeloTempo.DataAccess
 {
     public class PerguntaDAO
     {
-        public Questao Buscar(int IdQuest)
+        public Questao Buscar(int fase)
         {
             //Criando uma conexão com o banco de dados
             using (SqlConnection conn =
@@ -23,11 +23,30 @@ namespace ViagemPeloTempo.DataAccess
             {
                 //Criando numero randomido de 1 a 36
                 Random random = new Random();
-                int numAle = Convert.ToInt32(random.Next(1, 45));
+                if (fase == 1)
+                {
+                    int numAle = Convert.ToInt32(random.Next(1, 9));
+                }
+                if (fase == 2)
+                {
+                    int numAle = Convert.ToInt32(random.Next(10, 18));
+                }
+                if (fase == 3)
+                {
+                    int numAle = Convert.ToInt32(random.Next(19, 27));
+                }
+                if (fase == 4)
+                {
+                    int numAle = Convert.ToInt32(random.Next(28, 36));
+                }
+                if (fase == 5)
+                {
+                    int numAle = Convert.ToInt32(random.Next(37, 45));
+                }
 
 
                 //Criando instrução sql para selecionar todos os registros na tabela de contatos
-                string strSQL = @"SELECT q.texto, a.texto FROM questao as q where id = " + numAle + " inner join alternativa as a on q.idquest = a.idquest;";
+                string strSQL = @"SELECT q.texto as q_texto, a.texto as a_texto FROM questao as q  inner join alternativa as a on q.idquest = a.idquest where q.idquest = " + numAle + ";";
 
                 //Criando um comando sql que será executado na base de dados
                 using (SqlCommand cmd = new SqlCommand(strSQL))
@@ -45,28 +64,24 @@ namespace ViagemPeloTempo.DataAccess
 
                     if (dt == null || dt.Rows.Count <= 0)
                         return null;
-                    var rowQuestao = dt.Rows[0];
+
                     var questao = new Questao()
                     {
-                        Texto = rowQuestao[("q.texto")].ToString()
-                        //....dt.Rows[0]
+                        Texto = dt.Rows[0][("q_texto")].ToString()
                     };
-                    var mQ = questao.Texto.ToString(); 
 
                     foreach (DataRow row in dt.Rows)
                     {
                         questao.Alternativas.Add(new Alternativa()
                         {
-                            Texto = row[("a.texto")].ToString()
+                            Texto = row[("a_texto")].ToString()
                         });
                     }
 
-
-                    return null;
+                    return questao;
                 }
             }
 
         }
-
     }
 }

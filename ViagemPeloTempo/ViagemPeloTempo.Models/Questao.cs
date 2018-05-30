@@ -16,6 +16,7 @@ namespace ViagemPeloTempo.Models
 
         public Questao()
         {
+            
             this.Alternativas = new List<Alternativa>();
         }
     }

@@ -16,7 +16,7 @@ namespace ViagemPeloTempo.Controllers
         // GET: Jogos
         public ActionResult PagJogoA()
         {
-            
+
             return View();
         }
 
@@ -37,7 +37,8 @@ namespace ViagemPeloTempo.Controllers
 
         public ActionResult PagJogop()
         {
-            return View();
+            var questao = new PerguntaDAO().Buscar(fase = 1);
+            return View(questao);
         }
     }
 }
