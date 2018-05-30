@@ -22,26 +22,27 @@ namespace ViagemPeloTempo.DataAccess
                                     Integrated Security=SSPI;"))
             {
                 //Criando numero randomido de 1 a 36
+                int numAle = 0;
                 Random random = new Random();
                 if (fase == 1)
                 {
-                    int numAle = Convert.ToInt32(random.Next(1, 9));
+                    numAle = Convert.ToInt32(random.Next(1, 9));
                 }
                 if (fase == 2)
                 {
-                    int numAle = Convert.ToInt32(random.Next(10, 18));
+                    numAle = Convert.ToInt32(random.Next(10, 18));
                 }
                 if (fase == 3)
                 {
-                    int numAle = Convert.ToInt32(random.Next(19, 27));
+                    numAle = Convert.ToInt32(random.Next(19, 27));
                 }
                 if (fase == 4)
                 {
-                    int numAle = Convert.ToInt32(random.Next(28, 36));
+                    numAle = Convert.ToInt32(random.Next(28, 36));
                 }
-                if (fase == 5)
+                else
                 {
-                    int numAle = Convert.ToInt32(random.Next(37, 45));
+                    numAle = Convert.ToInt32(random.Next(37, 45));
                 }
 
 
