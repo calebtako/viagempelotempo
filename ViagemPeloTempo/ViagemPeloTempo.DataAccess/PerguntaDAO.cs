@@ -23,10 +23,17 @@ namespace ViagemPeloTempo.DataAccess
             {
                 //Criando numero randomido de 1 a 36
                 int numAle = 0;
+                int repi = 0;
                 Random random = new Random();
                 if (fase == 1)
                 {
-                    numAle = Convert.ToInt32(random.Next(1, 9));
+                    do
+                    {
+                        repi = numAle;
+                        numAle = Convert.ToInt32(random.Next(1, 9));
+                        
+                    }
+                    while (repi == numAle);
                 }
                 if (fase == 2)
                 {
@@ -40,7 +47,7 @@ namespace ViagemPeloTempo.DataAccess
                 {
                     numAle = Convert.ToInt32(random.Next(28, 36));
                 }
-                else
+                if (fase == 5)
                 {
                     numAle = Convert.ToInt32(random.Next(37, 45));
                 }
@@ -84,5 +91,13 @@ namespace ViagemPeloTempo.DataAccess
             }
 
         }
+
+        public Resposta inserir()
+        {
+
+
+            return null;
+        }
+
     }
 }

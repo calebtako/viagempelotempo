@@ -16,36 +16,36 @@ namespace ViagemPeloTempo.Controllers
         // GET: Jogos
         public ActionResult PagJogoA()
         {
-            int fase;
-            var questao = new PerguntaDAO().Buscar(fase = 2);
-            return View();
+            
+            var questao = new PerguntaDAO().Buscar(2);
+            return View(questao);
         }
 
         public ActionResult PagJogoC()
         {
-            int fase;
-            var questao = new PerguntaDAO().Buscar(fase = 5);
-            return View();
+           
+            var questao = new PerguntaDAO().Buscar(5);
+            return View(questao);
         }
 
         public ActionResult PagJogoMe()
         {
-            int fase;
-            var questao = new PerguntaDAO().Buscar(fase = 3);
-            return View();
+            
+            var questao = new PerguntaDAO().Buscar(3);
+            return View(questao);
         }
 
         public ActionResult PagJogoMo()
         {
-            int fase;
-            var questao = new PerguntaDAO().Buscar(fase = 4);
-            return View();
+            
+            var questao = new PerguntaDAO().Buscar(4);
+            return View(questao);
         }
 
         public ActionResult PagJogoP()
         {
-            int fase;
-            var questao = new PerguntaDAO().Buscar(fase = 1);
+            
+            var questao = new PerguntaDAO().Buscar(1);
             return View(questao);
         }
     }
