@@ -92,11 +92,36 @@ namespace ViagemPeloTempo.DataAccess
 
         }
 
-        public Resposta inserir()
+        public void inserir(Resposta obj)
         {
 
+            //Criando uma conexão com o banco de dados
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=viagempelotempo; Data Source=localhost; Integrated Security=SSPI;"))
+            {
+                //Criando instrução sql para inserir na tabela de estados
+                string strSQL = @"INSERT INTO resposta (idjogador, idquestao,idalternativa, hora_inicio, hora_fim) 
+                                  VALUES (@idjogador, @idquestao,@idalternativa, @hora_inicio, @hora_fim);";
 
-            return null;
+                //Criando um comando sql que será executado na base de dados
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    cmd.Connection = conn;
+                    //Preenchendo os parâmetros da instrução sql
+                    cmd.Parameters.Add("@idjogador", SqlDbType.Int).Value = obj.IdUsuario;
+                    cmd.Parameters.Add("@idquestao", SqlDbType.Int).Value = obj.IdQuest;
+                    cmd.Parameters.Add("@idalternativa", SqlDbType.Int).Value = obj.IdAlt;
+                    cmd.Parameters.Add("@hora_inicio", SqlDbType.DateTime).Value = obj.HoraInicio;
+                    cmd.Parameters.Add("@hora_fim", SqlDbType.DateTime).Value = obj.HoraFim;
+
+
+                    //Abrindo conexão com o banco de dados
+                    conn.Open();
+                    //Executando instrução sql
+                    cmd.ExecuteNonQuery();
+                    //Fechando conexão com o banco de dados
+                    conn.Close();
+                }
+            }
         }
 
     }

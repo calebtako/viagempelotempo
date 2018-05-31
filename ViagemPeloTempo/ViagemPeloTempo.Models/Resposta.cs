@@ -9,7 +9,10 @@ namespace ViagemPeloTempo.Models
     public class Resposta
     {
         public Questao IdQuest { get; set; }
-        public Alternativa IdResp { get; set; }
+        public Alternativa IdAlt { get; set; }
         public Jogador IdUsuario { get; set; }
+        public DateTime HoraInicio { get; set; }
+        public DateTime HoraFim { get; set; }
+
     }
 }
