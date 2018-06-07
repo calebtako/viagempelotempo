@@ -105,6 +105,8 @@ namespace ViagemPeloTempo.DataAccess
                 //Criando um comando sql que será executado na base de dados
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
+
+
                     cmd.Connection = conn;
                     //Preenchendo os parâmetros da instrução sql
                     cmd.Parameters.Add("@idjogador", SqlDbType.Int).Value = obj.IdUsuario;
