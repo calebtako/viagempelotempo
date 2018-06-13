@@ -85,9 +85,49 @@ namespace ViagemPeloTempo.DataAccess
             }
         }
 
-        public Jogador VerPerfil(Jogador obj)
+        public Jogador VerPerfil(int usuarioid)
         {
+            //usuarioid
+            //Criando uma conexão com o banco de dados
+            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=viagempelotempo; Data Source=localhost; Integrated Security=SSPI;"))
+            {
+                //Criando instrução sql para selecionar todos os registros na tabela de usuarios
+                string strSQL = @"SELECT * FROM jogador where idjogador =" + usuarioid;
+                Jogador perfil = new Jogador()
+                //Criando um comando sql que será executado na base de dados
+                using (SqlCommand cmd = new SqlCommand(strSQL))
+                {
+                    //Abrindo conexão com o banco de dados
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = perfil.Email;
+                    cmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = perfil.Senha;
+                    cmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = perfil.NomeUsuario;
+                    cmd.CommandText = strSQL;
+                    //Executando instrução sql
+                    var dataReader = cmd.ExecuteReader();
+                    var dt = new DataTable();
+                    dt.Load(dataReader);
+                    //Fechando conexão com o banco de dados
+                    conn.Close();
 
+                    if (!(dt != null && dt.Rows.Count > 0))
+                        return null;
+
+                    var row = dt.Rows[0];
+                    var usuario = new Jogador()
+                    {
+                        IdUsuario = Convert.ToInt32(row["idjogador"]),
+                        NomeUsuario = row["nomeusuario"].ToString(),
+                        Email = row["email"].ToString(),
+                        Senha = row["senha"].ToString(),
+                        Nick = row["nick"].ToString(),
+                        Administrador = Convert.ToBoolean(row["administrador"])
+                    };
+
+                    return usuario;
+                }
+            }
         }
     }
 }

@@ -344,7 +344,6 @@ create table jogador
 	idjogador int primary key identity(1,1),
 	nomeusuario varchar(100),
 	senha varchar(50),
-	nick varchar(50),
 	email varchar(200),
 	imagem image default 'C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\fonts\imagens\defalt.jpg',
 	administrador bit default 0
@@ -354,7 +353,7 @@ create table jogador
 );
 go
 insert into jogador values
-('123', '123', '123', 'email', 'C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\fonts\imagens\defalt.jpg', 0);
+('123', '123', 'email', 'C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\fonts\imagens\defalt.jpg', 0);
 go
 create table resposta
 (
@@ -377,3 +376,10 @@ SELECT q.texto, a.texto FROM questao as q
 inner join alternativa as a on q.idquest = a.idquest 
 where q.idquest = 10;
 
+SELECT * FROM jogador where idjogador = 1
+
+-- drop table fase
+-- drop table questao
+-- drop table alternativa
+-- drop table jogador
+-- drop table resposta

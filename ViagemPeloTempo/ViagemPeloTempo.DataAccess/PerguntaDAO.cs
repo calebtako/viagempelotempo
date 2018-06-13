@@ -13,6 +13,8 @@ namespace ViagemPeloTempo.DataAccess
 {
     public class PerguntaDAO
     {
+        public Jogador User { get; private set; }
+
         public Questao Buscar(int fase)
         {
             //Criando uma conexão com o banco de dados
@@ -98,6 +100,11 @@ namespace ViagemPeloTempo.DataAccess
             //Criando uma conexão com o banco de dados
             using (SqlConnection conn = new SqlConnection(@"Initial Catalog=viagempelotempo; Data Source=localhost; Integrated Security=SSPI;"))
             {
+
+
+                var usuarioid = ((Jogador)User).IdUsuario;
+                var questid = ;
+
                 //Criando instrução sql para inserir na tabela de estados
                 string strSQL = @"INSERT INTO resposta (idjogador, idquestao,idalternativa, hora_inicio, hora_fim) 
                                   VALUES (@idjogador, @idquestao,@idalternativa, @hora_inicio, @hora_fim);";
@@ -109,7 +116,7 @@ namespace ViagemPeloTempo.DataAccess
 
                     cmd.Connection = conn;
                     //Preenchendo os parâmetros da instrução sql
-                    cmd.Parameters.Add("@idjogador", SqlDbType.Int).Value = obj.IdUsuario;
+                    cmd.Parameters.Add("@idjogador", SqlDbType.Int).Value = usuarioid;
                     cmd.Parameters.Add("@idquestao", SqlDbType.Int).Value = obj.IdQuest;
                     cmd.Parameters.Add("@idalternativa", SqlDbType.Int).Value = obj.IdAlt;
                     cmd.Parameters.Add("@hora_inicio", SqlDbType.DateTime).Value = obj.HoraInicio;
