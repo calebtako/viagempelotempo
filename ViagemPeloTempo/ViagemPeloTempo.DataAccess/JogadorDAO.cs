@@ -85,5 +85,9 @@ namespace ViagemPeloTempo.DataAccess
             }
         }
 
+        public Jogador VerPerfil(Jogador obj)
+        {
+
+        }
     }
 }

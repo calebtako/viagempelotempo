@@ -47,6 +47,7 @@ namespace ViagemPeloTempo.Controllers
             
             var questao = new PerguntaDAO().Buscar(1);
             return View(questao);
+
         }
     }
 }

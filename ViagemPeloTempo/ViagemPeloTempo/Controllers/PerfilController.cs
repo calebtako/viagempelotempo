@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using ViagemPeloTempo.Models;
 
 namespace ViagemPeloTempo.Controllers
 {
@@ -12,6 +13,9 @@ namespace ViagemPeloTempo.Controllers
         // GET: Perfil
         public ActionResult PagPerfil()
         {
+
+            var usuarioid = ((Jogador)User).IdUsuario;
+
             return View();
         }
     }
