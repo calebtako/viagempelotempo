@@ -57,7 +57,7 @@ namespace ViagemPeloTempo.Controllers
         {
             DateTime saida = DateTime.Now;
             var inserir = new PerguntaDAO();
-            inserir.Inserir();
+            inserir.Inserir(saida, entra);
             return RedirectToAction("PagJogoA", "Jogos");
         }
     }
