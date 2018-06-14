@@ -27,8 +27,7 @@ namespace ViagemPeloTempo.DataAccess
                     cmd.Connection = conn;
                     //Preenchendo os parâmetros da instrução sql
                     cmd.Parameters.Add("@nomeusuario", SqlDbType.VarChar).Value = obj.NomeUsuario;
-                    cmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = obj.Senha;
-                    cmd.Parameters.Add("@nick", SqlDbType.VarChar).Value = obj.Nick;
+                    cmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = obj.Senha;                   
                     cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = obj.Email;
 
 
@@ -75,8 +74,7 @@ namespace ViagemPeloTempo.DataAccess
                         IdUsuario = Convert.ToInt32(row["idjogador"]),
                         NomeUsuario = row["nomeusuario"].ToString(),
                         Email = row["email"].ToString(),
-                        Senha = row["senha"].ToString(),
-                        Nick = row["nick"].ToString(),
+                        Senha = row["senha"].ToString(),                        
                         Administrador = Convert.ToBoolean(row["administrador"])
                     };
 
@@ -93,7 +91,9 @@ namespace ViagemPeloTempo.DataAccess
             {
                 //Criando instrução sql para selecionar todos os registros na tabela de usuarios
                 string strSQL = @"SELECT * FROM jogador where idjogador =" + usuarioid;
-                Jogador perfil = new Jogador()
+
+                Jogador perfil = new Jogador();
+
                 //Criando um comando sql que será executado na base de dados
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
@@ -120,8 +120,7 @@ namespace ViagemPeloTempo.DataAccess
                         IdUsuario = Convert.ToInt32(row["idjogador"]),
                         NomeUsuario = row["nomeusuario"].ToString(),
                         Email = row["email"].ToString(),
-                        Senha = row["senha"].ToString(),
-                        Nick = row["nick"].ToString(),
+                        Senha = row["senha"].ToString(),                       
                         Administrador = Convert.ToBoolean(row["administrador"])
                     };
 
