@@ -10,11 +10,9 @@ namespace ViagemPeloTempo.Controllers
     [Authorize]
     public class PerfilController : Controller
     {
-        // GET: Perfil
         public ActionResult PagPerfil()
         {
-
-            var usuarioid = ((Jogador)User).IdUsuario;
+            var usuarioId = ((Jogador)User).IdUsuario;
 
             return View();
         }
