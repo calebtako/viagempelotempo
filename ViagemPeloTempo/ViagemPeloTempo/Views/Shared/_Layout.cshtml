@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>ViagemPeloTempo</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <style type="text/css">
@@ -38,7 +38,6 @@
                     <li class="active"><a href="@Url.Action("PaginaInicial", "PagInicio")">Inicio</a></li>
                     <li><a href="@Url.Action("PagPerfil", "Perfil")">Perfil</a></li>
                     <li><a href="@Url.Action("RankJ", "Rank")">Rank</a></li>
-
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="@Url.Action("LogOff", "Login")">Sair</a></li>
@@ -50,12 +49,11 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - ViagemPeloTempo</p>
         </footer>
     </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

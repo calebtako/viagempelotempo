@@ -48,6 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Questao.cs" />
     <Compile Include="Alternativa.cs" />
+    <Compile Include="Ranking.cs" />
     <Compile Include="Resposta.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
