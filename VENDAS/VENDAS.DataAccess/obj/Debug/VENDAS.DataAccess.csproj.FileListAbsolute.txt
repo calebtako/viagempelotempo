@@ -1,7 +1,0 @@
-c:\users\andradeti\documents\visual studio 2015\Projects\VENDAS\VENDAS.DataAccess\bin\Debug\VENDAS.DataAccess.dll
-c:\users\andradeti\documents\visual studio 2015\Projects\VENDAS\VENDAS.DataAccess\bin\Debug\VENDAS.DataAccess.pdb
-c:\users\andradeti\documents\visual studio 2015\Projects\VENDAS\VENDAS.DataAccess\bin\Debug\VENDAS.Models.dll
-c:\users\andradeti\documents\visual studio 2015\Projects\VENDAS\VENDAS.DataAccess\bin\Debug\VENDAS.Models.pdb
-c:\users\andradeti\documents\visual studio 2015\Projects\VENDAS\VENDAS.DataAccess\obj\Debug\VENDAS.DataAccess.csprojResolveAssemblyReference.cache
-c:\users\andradeti\documents\visual studio 2015\Projects\VENDAS\VENDAS.DataAccess\obj\Debug\VENDAS.DataAccess.dll
-c:\users\andradeti\documents\visual studio 2015\Projects\VENDAS\VENDAS.DataAccess\obj\Debug\VENDAS.DataAccess.pdb

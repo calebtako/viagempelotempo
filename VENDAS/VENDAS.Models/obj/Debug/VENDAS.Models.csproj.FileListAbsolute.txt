@@ -1,5 +1,0 @@
-c:\users\andradeti\documents\visual studio 2015\Projects\VENDAS\VENDAS.Models\bin\Debug\VENDAS.Models.dll
-c:\users\andradeti\documents\visual studio 2015\Projects\VENDAS\VENDAS.Models\bin\Debug\VENDAS.Models.pdb
-c:\users\andradeti\documents\visual studio 2015\Projects\VENDAS\VENDAS.Models\obj\Debug\VENDAS.Models.dll
-c:\users\andradeti\documents\visual studio 2015\Projects\VENDAS\VENDAS.Models\obj\Debug\VENDAS.Models.pdb
-c:\users\andradeti\documents\visual studio 2015\Projects\VENDAS\VENDAS.Models\obj\Debug\VENDAS.Models.csprojResolveAssemblyReference.cache

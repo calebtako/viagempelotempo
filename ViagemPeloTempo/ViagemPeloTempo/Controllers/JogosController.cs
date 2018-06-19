@@ -56,8 +56,7 @@ namespace ViagemPeloTempo.Controllers
         public ActionResult SalvarJogo(Questao obj)
         {
             DateTime saida = DateTime.Now;
-            var inserir = new PerguntaDAO();
-            inserir.Inserir(saida, entra);
+            //new PerguntaDAO().Inserir(saida, entra);
             return RedirectToAction("PagJogoA", "Jogos");
         }
     }
