@@ -23,7 +23,6 @@ namespace ViagemPeloTempo.DataAccess
                     {
                         repi = numAle;
                         numAle = Convert.ToInt32(random.Next(1, 9));
-
                     }
                     while (repi == numAle);
                 }
@@ -44,9 +43,15 @@ namespace ViagemPeloTempo.DataAccess
                     numAle = Convert.ToInt32(random.Next(37, 45));
                 }
 
-
                 //Criando instrução sql para selecionar todos os registros na tabela de contatos
-                string strSQL = @"SELECT q.texto as q_texto, a.texto as a_texto FROM questao as q  inner join alternativa as a on q.idquest = a.idquest where q.idquest = " + numAle + ";";
+                string strSQL = @"SELECT 
+                                    q.idquest,
+                                    q.texto as q_texto, 
+                                    a.idalternativa,
+                                    a.texto as a_texto  
+                                  FROM questao as q  
+                                  INNER JOIN alternativa as a on q.idquest = a.idquest 
+                                  WHERE q.idquest = " + numAle + ";";
 
                 //Criando um comando sql que será executado na base de dados
                 using (SqlCommand cmd = new SqlCommand(strSQL))
@@ -55,11 +60,11 @@ namespace ViagemPeloTempo.DataAccess
                     conn.Open();
                     cmd.Connection = conn;
                     cmd.CommandText = strSQL;
+
                     //Executando instrução sql
                     var dataReader = cmd.ExecuteReader();
                     var dt = new DataTable();
                     dt.Load(dataReader);
-                    //Fechando conexão com o banco de dados
                     conn.Close();
 
                     if (dt == null || dt.Rows.Count <= 0)
@@ -67,14 +72,16 @@ namespace ViagemPeloTempo.DataAccess
 
                     var questao = new Questao()
                     {
-                        Texto = dt.Rows[0][("q_texto")].ToString()
+                        IdQuest = Convert.ToInt32(dt.Rows[0]["idquest"]),
+                        Texto = dt.Rows[0]["q_texto"].ToString()
                     };
 
                     foreach (DataRow row in dt.Rows)
                     {
                         questao.Alternativas.Add(new Alternativa()
                         {
-                            Texto = row[("a_texto")].ToString()
+                            IdAlternativa = Convert.ToInt32(row["idalternativa"]),
+                            Texto = row["a_texto"].ToString()
                         });
                     }
 

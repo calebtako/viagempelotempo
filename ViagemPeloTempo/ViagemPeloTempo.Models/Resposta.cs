@@ -7,9 +7,9 @@ namespace ViagemPeloTempo.Models
 {
     public class Resposta
     {
-        public Questao IdQuest { get; set; }
-        public Alternativa IdAlt { get; set; }
-        public Jogador IdUsuario { get; set; }
-        public DateTime Tempo { get; set; }
+        public Questao Questao { get; set; }
+        public Alternativa Alternativa { get; set; }
+        public Jogador Jogador { get; set; }
+        public DateTime DataHora { get; set; }
     }
 }

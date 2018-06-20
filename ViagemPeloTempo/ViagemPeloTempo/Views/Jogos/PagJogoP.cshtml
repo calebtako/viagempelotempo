@@ -1,7 +1,4 @@
 ﻿@model ViagemPeloTempo.Models.Questao
-
-
-
 <div class="row">
     <div class="col-md-12 text-center">
         <h3>Desbrave atravez da Pré-historia</h3>
@@ -10,22 +7,31 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        <form action="@Url.Action("PagJogoP", "Jogos")" class="form-horizontal">
+        <form action="@Url.Action("SalvarJogoP", "Jogos")" class="form-horizontal">
+            <input type="hidden" name="Questao.IdQuest" value="@Model.IdQuest" />
             <div class="form-group">
-                <img src="~/fonts/imagens/Sky94.png" id="imagemFundo" height="600" width="1000" />
-            </div>
-            <div class="form-group">
-                @Html.Label("lblTexto", string.Format("{0}", Model.Texto), new { @class = "label-control" })
-            </div>
-            @foreach (var item in Model.Alternativas)
-            {
-                <div class="form-group">
-                    <input type="radio" name="alt" />
-                    @Html.Label("lblalt" + item.Id, string.Format("{0}", item.Texto), new { @class = "label-control" })
+                <div class="col-md-12 text-center">
+                    <img src="~/fonts/imagens/Sky94.png" id="imagemFundo" height="600" width="1000" />
                 </div>
-            }
+            </div>
             <div class="form-group">
-                <button>Salvar</button>
+                <div class="col-md-12">
+                    @Html.Label("lblTexto", string.Format("{0}", Model.Texto), new { @class = "label-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @foreach (var item in Model.Alternativas)
+                {
+                    <div class="col-md-12">
+                        <input type="radio" name="Alternativa.IdAlternativa" value="@item.IdAlternativa" />
+                        @Html.Label("lblalt" + item.Id, string.Format("{0}", item.Texto), new { @class = "label-control" })
+                    </div>
+                }
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <button class="btn btn-primary">Salvar</button>
+                </div>
             </div>
         </form>
     </div>
