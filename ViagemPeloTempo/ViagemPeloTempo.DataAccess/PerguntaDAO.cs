@@ -82,37 +82,5 @@ namespace ViagemPeloTempo.DataAccess
                 }
             }
         }
-
-        public void Inserir(int usuarioid, DateTime entra, DateTime saida)
-        {
-            //Criando uma conexão com o banco de dados
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
-            {
-                Resposta obj = new Resposta();
-
-                //Criando instrução sql para inserir na tabela de estados
-                string strSQL = @"INSERT INTO resposta (idjogador, idquestao,idalternativa, hora_inicio, hora_fim) 
-                                  VALUES (@idjogador, @idquestao,@idalternativa, @hora_inicio, @hora_fim);";
-
-                //Criando um comando sql que será executado na base de dados
-                using (SqlCommand cmd = new SqlCommand(strSQL))
-                {
-                    cmd.Connection = conn;
-                    //Preenchendo os parâmetros da instrução sql
-                    cmd.Parameters.Add("@idjogador", SqlDbType.Int).Value = usuarioid;
-                    cmd.Parameters.Add("@idquestao", SqlDbType.Int).Value = obj.IdQuest;
-                    cmd.Parameters.Add("@idalternativa", SqlDbType.Int).Value = obj.IdAlt;
-                    cmd.Parameters.Add("@hora_inicio", SqlDbType.DateTime).Value = entra;
-                    cmd.Parameters.Add("@hora_fim", SqlDbType.DateTime).Value = obj.HoraFim;
-
-                    //Abrindo conexão com o banco de dados
-                    conn.Open();
-                    //Executando instrução sql
-                    cmd.ExecuteNonQuery();
-                    //Fechando conexão com o banco de dados
-                    conn.Close();
-                }
-            }
-        }
     }
 }

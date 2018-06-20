@@ -10,7 +10,6 @@ namespace ViagemPeloTempo.Models
         public Questao IdQuest { get; set; }
         public Alternativa IdAlt { get; set; }
         public Jogador IdUsuario { get; set; }
-        public DateTime HoraInicio { get; set; }
-        public DateTime HoraFim { get; set; }
+        public DateTime Tempo { get; set; }
     }
 }

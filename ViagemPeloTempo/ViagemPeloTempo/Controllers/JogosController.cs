@@ -14,7 +14,7 @@ namespace ViagemPeloTempo.Controllers
     {
         public ActionResult PagJogoA()
         {
-            DateTime entra = DateTime.Now;
+            
             var questao = new PerguntaDAO().Buscar(2);
             var usuarioid = ((Jogador)User).IdUsuario;
             return View(questao);

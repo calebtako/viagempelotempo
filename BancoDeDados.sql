@@ -360,8 +360,7 @@ create table resposta
 	idjogador int references jogador,
 	idquestao int references questao,
 	idalternativa int references alternativa,
-	hora_inicio datetime not null,
-	hora_fim datetime not null,
+	tempo datetime default getdate(),
 	constraint pk_resposta primary key (idjogador, idquestao, idalternativa)
 );
 go

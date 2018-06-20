@@ -45,6 +45,7 @@
     <Compile Include="PerguntaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RankingDAO.cs" />
+    <Compile Include="RespostaDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ViagemPeloTempo.Models\ViagemPeloTempo.Models.csproj">
