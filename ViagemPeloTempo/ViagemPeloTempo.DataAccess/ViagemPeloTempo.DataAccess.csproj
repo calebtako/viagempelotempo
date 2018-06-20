@@ -44,6 +44,7 @@
     <Compile Include="JogadorDAO.cs" />
     <Compile Include="PerguntaDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestaoDAO.cs" />
     <Compile Include="RankingDAO.cs" />
     <Compile Include="RespostaDAO.cs" />
   </ItemGroup>

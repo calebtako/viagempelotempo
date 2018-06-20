@@ -26,7 +26,7 @@ namespace ViagemPeloTempo.DataAccess
                                   inner join alternativa a on (a.idalternativa = r.idalternativa)
                                   inner join jogador j on (j.idjogador = r.idjogador)
                                   where a.correta <> 0
-                                  and month(r.hora_inicio) = month(getdate())
+                                  and month(r.tempo) = month(getdate())
                                   group by j.nomeusuario
                                   having count(r.idalternativa) > 0
                                   order by count(r.idalternativa) desc;";
@@ -80,7 +80,7 @@ namespace ViagemPeloTempo.DataAccess
                                   inner join alternativa a on (a.idalternativa = r.idalternativa)
                                   inner join jogador j on (j.idjogador = r.idjogador)
                                   where a.correta <> 0
-                                  and datepart(week, r.hora_inicio) = datepart(week, getdate())
+                                  and datepart(week, r.tempo) = datepart(week, getdate())
                                   group by j.nomeusuario
                                   having count(r.idalternativa) > 0
                                   order by count(r.idalternativa) desc;";

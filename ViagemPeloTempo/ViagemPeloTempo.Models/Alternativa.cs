@@ -8,7 +8,7 @@ namespace ViagemPeloTempo.Models
     public class Alternativa
     {
         public int IdAlternativa { get; set; }
-        public Questao Id { get; set; }
+        public Questao Questao { get; set; }
         public string Texto { get; set; }
         public bool Correta { get; set; }
     }

@@ -8,50 +8,45 @@ namespace ViagemPeloTempo.DataAccess
 {
     public class PerguntaDAO
     {
-        public Questao Buscar(int fase)
+        public Questao Buscar(int fase, int jogador)
         {
             //Criando uma conexão com o banco de dados
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                //Criando numero randomido de 1 a 36
+                //Criando numero randomico de 1 a 45
                 int numAle = 0;
-                int repi = 0;
                 Random random = new Random();
                 if (fase == 1)
                 {
-                    do
-                    {
-                        repi = numAle;
-                        numAle = Convert.ToInt32(random.Next(1, 9));
-                    }
-                    while (repi == numAle);
+                    numAle = Convert.ToInt32(random.Next(1, 9 + 1));
                 }
-                if (fase == 2)
+                else if (fase == 2)
                 {
-                    numAle = Convert.ToInt32(random.Next(10, 18));
+                    numAle = Convert.ToInt32(random.Next(10, 18 + 1));
                 }
-                if (fase == 3)
+                else if (fase == 3)
                 {
-                    numAle = Convert.ToInt32(random.Next(19, 27));
+                    numAle = Convert.ToInt32(random.Next(19, 27 + 1));
                 }
-                if (fase == 4)
+                else if (fase == 4)
                 {
-                    numAle = Convert.ToInt32(random.Next(28, 36));
+                    numAle = Convert.ToInt32(random.Next(28, 36 + 1));
                 }
-                if (fase == 5)
+                else if (fase == 5)
                 {
-                    numAle = Convert.ToInt32(random.Next(37, 45));
+                    numAle = Convert.ToInt32(random.Next(37, 45 + 1));
                 }
 
                 //Criando instrução sql para selecionar todos os registros na tabela de contatos
-                string strSQL = @"SELECT 
+                string strSQL = string.Format(@"SELECT 
                                     q.idquest,
                                     q.texto as q_texto, 
                                     a.idalternativa,
                                     a.texto as a_texto  
                                   FROM questao as q  
                                   INNER JOIN alternativa as a on q.idquest = a.idquest 
-                                  WHERE q.idquest = " + numAle + ";";
+                                  WHERE q.idquest = {0}
+                                  AND q.idquest not in (select idquestao from resposta where idjogador = {1})", numAle, jogador);
 
                 //Criando um comando sql que será executado na base de dados
                 using (SqlCommand cmd = new SqlCommand(strSQL))

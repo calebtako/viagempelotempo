@@ -8,33 +8,93 @@ namespace ViagemPeloTempo.Controllers
     [Authorize]
     public class JogosController : Controller
     {
-        public ActionResult PagJogoA()
+        public ActionResult PagJogoP()
         {
-            var questao = new PerguntaDAO().Buscar(2);
+            var questoes = new QuestaoDAO().BuscarPorFase(1);
+            var respostas = new RespostaDAO().Buscar(1, ((Jogador)User).IdUsuario);
+
+            if (questoes.Count == respostas.Count)
+            {
+                return RedirectToAction("PagJogoA", "Jogos");
+            }
+
+            var questao = new PerguntaDAO().Buscar(1, ((Jogador)User).IdUsuario);
+            while (questao == null)
+            {
+                questao = new PerguntaDAO().Buscar(1, ((Jogador)User).IdUsuario);
+            }
             return View(questao);
         }
 
-        public ActionResult PagJogoC()
+        public ActionResult PagJogoA()
         {
-            var questao = new PerguntaDAO().Buscar(5);
+            var questoes = new QuestaoDAO().BuscarPorFase(2);
+            var respostas = new RespostaDAO().Buscar(2, ((Jogador)User).IdUsuario);
+
+            if (questoes.Count == respostas.Count)
+            {
+                return RedirectToAction("PagJogoMe", "Jogos");
+            }
+
+            var questao = new PerguntaDAO().Buscar(2, ((Jogador)User).IdUsuario);
+            while (questao == null)
+            {
+                questao = new PerguntaDAO().Buscar(2, ((Jogador)User).IdUsuario);
+            }
             return View(questao);
         }
 
         public ActionResult PagJogoMe()
         {
-            var questao = new PerguntaDAO().Buscar(3);
+            var questoes = new QuestaoDAO().BuscarPorFase(3);
+            var respostas = new RespostaDAO().Buscar(3, ((Jogador)User).IdUsuario);
+
+            if (questoes.Count == respostas.Count)
+            {
+                return RedirectToAction("PagJogoMo", "Jogos");
+            }
+
+            var questao = new PerguntaDAO().Buscar(3, ((Jogador)User).IdUsuario);
+            while (questao == null)
+            {
+                questao = new PerguntaDAO().Buscar(3, ((Jogador)User).IdUsuario);
+            }
             return View(questao);
         }
 
         public ActionResult PagJogoMo()
         {
-            var questao = new PerguntaDAO().Buscar(4);
+            var questoes = new QuestaoDAO().BuscarPorFase(4);
+            var respostas = new RespostaDAO().Buscar(4, ((Jogador)User).IdUsuario);
+
+            if (questoes.Count == respostas.Count)
+            {
+                return RedirectToAction("PagJogoC", "Jogos");
+            }
+
+            var questao = new PerguntaDAO().Buscar(4, ((Jogador)User).IdUsuario);
+            while (questao == null)
+            {
+                questao = new PerguntaDAO().Buscar(4, ((Jogador)User).IdUsuario);
+            }
             return View(questao);
         }
 
-        public ActionResult PagJogoP()
+        public ActionResult PagJogoC()
         {
-            var questao = new PerguntaDAO().Buscar(1);
+            var questoes = new QuestaoDAO().BuscarPorFase(5);
+            var respostas = new RespostaDAO().Buscar(5, ((Jogador)User).IdUsuario);
+
+            if (questoes.Count == respostas.Count)
+            {
+                return RedirectToAction("RankJ", "Rank");
+            }
+
+            var questao = new PerguntaDAO().Buscar(5, ((Jogador)User).IdUsuario);
+            while (questao == null)
+            {
+                questao = new PerguntaDAO().Buscar(5, ((Jogador)User).IdUsuario);
+            }
             return View(questao);
         }
 
@@ -46,6 +106,46 @@ namespace ViagemPeloTempo.Controllers
             new RespostaDAO().Inserir(obj);
 
             return RedirectToAction("PagJogoP", "Jogos");
+        }
+
+        public ActionResult SalvarJogoA(Resposta obj)
+        {
+            obj.Jogador = new Jogador() { IdUsuario = ((Jogador)User).IdUsuario };
+            obj.DataHora = DateTime.Now;
+
+            new RespostaDAO().Inserir(obj);
+
+            return RedirectToAction("PagJogoA", "Jogos");
+        }
+
+        public ActionResult SalvarJogoMe(Resposta obj)
+        {
+            obj.Jogador = new Jogador() { IdUsuario = ((Jogador)User).IdUsuario };
+            obj.DataHora = DateTime.Now;
+
+            new RespostaDAO().Inserir(obj);
+
+            return RedirectToAction("PagJogoMe", "Jogos");
+        }
+
+        public ActionResult SalvarJogoMo(Resposta obj)
+        {
+            obj.Jogador = new Jogador() { IdUsuario = ((Jogador)User).IdUsuario };
+            obj.DataHora = DateTime.Now;
+
+            new RespostaDAO().Inserir(obj);
+
+            return RedirectToAction("PagJogoMo", "Jogos");
+        }
+
+        public ActionResult SalvarJogoC(Resposta obj)
+        {
+            obj.Jogador = new Jogador() { IdUsuario = ((Jogador)User).IdUsuario };
+            obj.DataHora = DateTime.Now;
+
+            new RespostaDAO().Inserir(obj);
+
+            return RedirectToAction("PagJogoC", "Jogos");
         }
     }
 }
