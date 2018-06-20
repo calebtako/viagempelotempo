@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using ViagemPeloTempo.Models;
 namespace ViagemPeloTempo.DataAccess
 {
     class RespostaDAO
@@ -16,9 +16,9 @@ namespace ViagemPeloTempo.DataAccess
             //Criando uma conexão com o banco de dados
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
+                
 
-
-                RespostaDAO obj = new RespostaDAO();
+                Resposta obj = new Resposta();
 
                 //Criando instrução sql para inserir na tabela de estados
                 string strSQL = @"INSERT INTO resposta (idjogador, idquestao,idalternativa) 
