@@ -7,13 +7,11 @@ using System.Web.Mvc;
 using ViagemPeloTempo.DataAccess;
 using ViagemPeloTempo.Models;
 
-
 namespace ViagemPeloTempo.Controllers
 {
     [Authorize]
     public class JogosController : Controller
     {
-        // GET: Jogos
         public ActionResult PagJogoA()
         {
             DateTime entra = DateTime.Now;
@@ -56,8 +54,7 @@ namespace ViagemPeloTempo.Controllers
         public ActionResult SalvarJogo(Questao obj)
         {
             DateTime saida = DateTime.Now;
-            var inserir = new PerguntaDAO();
-            inserir.Inserir(saida, entra);
+            //new PerguntaDAO().Inserir(saida, entra);
             return RedirectToAction("PagJogoA", "Jogos");
         }
     }

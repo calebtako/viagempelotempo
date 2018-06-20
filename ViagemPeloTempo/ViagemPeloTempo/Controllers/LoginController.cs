@@ -7,7 +7,6 @@ using System.Web.Script.Serialization;
 using ViagemPeloTempo.DataAccess;
 using ViagemPeloTempo.Models;
 
-
 namespace ViagemPeloTempo.Controllers
 {
     public class LoginController : Controller
@@ -25,7 +24,6 @@ namespace ViagemPeloTempo.Controllers
             {
                 ViewBag.MsgErro = "Email ou senha invalido";
                 return View("IndexLogin");
-
             }
 
             var userData = new JavaScriptSerializer().Serialize(jogadorLogado);

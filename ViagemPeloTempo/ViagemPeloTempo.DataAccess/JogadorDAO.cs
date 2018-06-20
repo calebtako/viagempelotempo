@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data.Sql;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using ViagemPeloTempo.Models;
 
 namespace ViagemPeloTempo.DataAccess
@@ -15,7 +11,7 @@ namespace ViagemPeloTempo.DataAccess
         public void Inserir(Jogador obj)
         {
             //Criando uma conexão com o banco de dados
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=viagempelotempo; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 //Criando instrução sql para inserir na tabela de estados
                 string strSQL = @"INSERT INTO Jogador (nomeusuario, senha, nick, email) 
@@ -27,7 +23,7 @@ namespace ViagemPeloTempo.DataAccess
                     cmd.Connection = conn;
                     //Preenchendo os parâmetros da instrução sql
                     cmd.Parameters.Add("@nomeusuario", SqlDbType.VarChar).Value = obj.NomeUsuario;
-                    cmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = obj.Senha;                   
+                    cmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = obj.Senha;
                     cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = obj.Email;
 
 
@@ -44,7 +40,7 @@ namespace ViagemPeloTempo.DataAccess
         public Jogador Logar(Jogador obj)
         {
             //Criando uma conexão com o banco de dados
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=viagempelotempo; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 //Criando instrução sql para selecionar todos os registros na tabela de usuarios
                 string strSQL = @"SELECT * FROM jogador where email = @email or senha = @senha;";
@@ -74,7 +70,7 @@ namespace ViagemPeloTempo.DataAccess
                         IdUsuario = Convert.ToInt32(row["idjogador"]),
                         NomeUsuario = row["nomeusuario"].ToString(),
                         Email = row["email"].ToString(),
-                        Senha = row["senha"].ToString(),                        
+                        Senha = row["senha"].ToString(),
                         Administrador = Convert.ToBoolean(row["administrador"])
                     };
 
@@ -83,14 +79,13 @@ namespace ViagemPeloTempo.DataAccess
             }
         }
 
-        public Jogador VerPerfil(int usuarioid)
+        public Jogador VerPerfil(int usuarioId)
         {
-            //usuarioid
             //Criando uma conexão com o banco de dados
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=viagempelotempo; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 //Criando instrução sql para selecionar todos os registros na tabela de usuarios
-                string strSQL = @"SELECT * FROM jogador where idjogador =" + usuarioid;
+                string strSQL = @"SELECT * FROM jogador where idjogador =" + usuarioId;
 
                 Jogador perfil = new Jogador();
 
@@ -120,7 +115,7 @@ namespace ViagemPeloTempo.DataAccess
                         IdUsuario = Convert.ToInt32(row["idjogador"]),
                         NomeUsuario = row["nomeusuario"].ToString(),
                         Email = row["email"].ToString(),
-                        Senha = row["senha"].ToString(),                       
+                        Senha = row["senha"].ToString(),
                         Administrador = Convert.ToBoolean(row["administrador"])
                     };
 

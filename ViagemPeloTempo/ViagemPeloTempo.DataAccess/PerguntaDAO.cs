@@ -1,27 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data.Sql;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using ViagemPeloTempo.Models;
-using System.Collections;
 
 namespace ViagemPeloTempo.DataAccess
 {
     public class PerguntaDAO
     {
-       
-
         public Questao Buscar(int fase)
         {
             //Criando uma conexão com o banco de dados
-            using (SqlConnection conn =
-                new SqlConnection(@"Initial Catalog=viagempelotempo;
-                                    Data Source=localhost;
-                                    Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 //Criando numero randomido de 1 a 36
                 int numAle = 0;
@@ -33,7 +23,7 @@ namespace ViagemPeloTempo.DataAccess
                     {
                         repi = numAle;
                         numAle = Convert.ToInt32(random.Next(1, 9));
-                        
+
                     }
                     while (repi == numAle);
                 }
@@ -91,16 +81,13 @@ namespace ViagemPeloTempo.DataAccess
                     return questao;
                 }
             }
-
         }
 
         public void Inserir(int usuarioid, DateTime entra, DateTime saida)
         {
-
             //Criando uma conexão com o banco de dados
-            using (SqlConnection conn = new SqlConnection(@"Initial Catalog=viagempelotempo; Data Source=localhost; Integrated Security=SSPI;"))
+            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
-                
                 Resposta obj = new Resposta();
 
                 //Criando instrução sql para inserir na tabela de estados
@@ -110,8 +97,6 @@ namespace ViagemPeloTempo.DataAccess
                 //Criando um comando sql que será executado na base de dados
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
-
-
                     cmd.Connection = conn;
                     //Preenchendo os parâmetros da instrução sql
                     cmd.Parameters.Add("@idjogador", SqlDbType.Int).Value = usuarioid;
@@ -119,7 +104,6 @@ namespace ViagemPeloTempo.DataAccess
                     cmd.Parameters.Add("@idalternativa", SqlDbType.Int).Value = obj.IdAlt;
                     cmd.Parameters.Add("@hora_inicio", SqlDbType.DateTime).Value = entra;
                     cmd.Parameters.Add("@hora_fim", SqlDbType.DateTime).Value = obj.HoraFim;
-
 
                     //Abrindo conexão com o banco de dados
                     conn.Open();
@@ -130,6 +114,5 @@ namespace ViagemPeloTempo.DataAccess
                 }
             }
         }
-
     }
 }

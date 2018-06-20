@@ -13,6 +13,7 @@ namespace ViagemPeloTempo.Controllers
         {
             return View();
         }
+
         public ActionResult Jogar()
         {
             return RedirectToAction("PagSelecao", "PagSelecao");
