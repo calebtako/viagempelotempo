@@ -31,6 +31,16 @@
         <div class="row">
             <div class="col-md-12">
                 <form action="@Url.Action("Salvar", "Cadastro")" class="form-horizontal">
+                    @if (!string.IsNullOrWhiteSpace(ViewBag.erroMsg))
+                    {
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <div class="alert alert-danger" role="alert">
+                                    <strong> Alerta!</strong>ViewBag.erroMsg</div>
+                            </div>
+                        </div>
+                    }
+
                     <div class="form-group">
                         <div class="col-md-12">
                             @Html.LabelFor(m => m.NomeUsuario, "Nome de Usuário", new { @class = "control-label" })
@@ -46,13 +56,7 @@
                             @Html.LabelFor(m => m.Senha, "Confirmação de Senha", new { @class = "control-label" })
                             @Html.PasswordFor(m => m.Senha, new { @class = "form-control" })
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-12">
-                            @Html.LabelFor(m => m.Nick, "Nick", new { @class = "control-label" })
-                            @Html.TextBoxFor(m => m.Nick, new { @class = "form-control" })
-                        </div>
-                    </div>
+                    </div>                   
                     <div class="form-group">
                         <div class="col-md-12">
                             @Html.LabelFor(m => m.Email, "Email", new { @class = "control-label" })

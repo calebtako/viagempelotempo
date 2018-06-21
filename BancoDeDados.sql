@@ -146,13 +146,13 @@ insert into alternativa values
 ---------questao 9
 (9, 'Várias ciências auxiliam o estudo, como a Antropologia, a Arqueologia e a Química.', 0),
 (9, 'A Pré-História pode ser dividida em Paleolítico e Neolítico, no que se refere ao processo técnico de trabalhar a pedra.', 0),
-(9, 'c.	O Neolítico apresentou um desenvolvimento artístico diferente do Paleolítico, através dos traços geométricos do desenho e da pintura.', 0),
-(9, 'd.	Os primeiros seres semelhantes ao homem foram os Australopitecus e o Homem de Java que eram bem mais adaptados que o Homem de Neanderthal.', 1),
+(9, 'O Neolítico apresentou um desenvolvimento artístico diferente do Paleolítico, através dos traços geométricos do desenho e da pintura.', 0),
+(9, 'Os primeiros seres semelhantes ao homem foram os Australopitecus e o Homem de Java que eram bem mais adaptados que o Homem de Neanderthal.', 1),
 
 ---------------------------------------------- fase 2 -------- Idade antiga
 
 ---------questao 1
-(10, '- Havia democracia na Idade Média, pois todos podiam escolher os reis e senhores feudais.', 0),
+(10, 'Havia democracia na Idade Média, pois todos podiam escolher os reis e senhores feudais.', 0),
 (10, 'O poder político e econômico estava todo concentrado nas mãos do clero católico, principalmente dos padres e monges.', 0),
 (10, 'O poder era centralizado na figura do senhor feudal que, além do poder político, possuia os poderes econômico e jurídico.', 1),
 (10, 'Com a formação das monarquias nacionais europeias na Idade Média, todo poder ficou concentrado nas mãos dos monarcas (reis), sendo que os senhores feudais ficaram sem nenhum poder nesta época.', 0),
@@ -184,7 +184,7 @@ insert into alternativa values
 ---------questao 7
 (16, 'alfabeto fonético.', 1),
 (16, 'organização estatal centralizada.', 0),
-(16, '.formação de um exército e de uma marinha de guerra profissionais.', 0),
+(16, 'formação de um exército e de uma marinha de guerra profissionais.', 0),
 (16, 'religião monoteísta.', 0),
 ---------questao 8
 (17, 'incorporarem a cultura sumeriana, especialmente os registros da nova Iíngua semítica em caracteres cuneiformes', 0),
@@ -210,7 +210,7 @@ insert into alternativa values
 (20, 'Corveia (trabalho de 3 a 4 dias nas terras do senhor feudal), talha (metade da produção) e banalidades (taxas pagas pela utilização do moinho e forno do senhor feudal).', 1),
 ---------questao 3
 (21, 'As moedas eram muito utilizadas, o artesanato era a base da economia medieval e as riquezas eram bem distribuídas entre todos os habitantes', 0),
-(21, '-A base era a agricultura, prevalecia o sistema de trocas de mercadorias (as moedas eram pouco utilizadas) e as relações comerciais com outras regiões e feudos era pequena.', 1),
+(21, 'A base era a agricultura, prevalecia o sistema de trocas de mercadorias (as moedas eram pouco utilizadas) e as relações comerciais com outras regiões e feudos era pequena.', 1),
 (21, 'A pecuária era a base da economia, as terras tinham pouco valor econômico e não todos os integrantes da sociedade eram isentos de impostos', 0),
 (21, 'O artesanato era a base da economia, os servos recebiam salários dos senhores feudais e as terras estavam concentradas totalmente nas mãos da Igreja Católica', 0),
 ---------questao 4
@@ -255,7 +255,7 @@ insert into alternativa values
 (29, 'O rei reinava mas não governava, a exemplo do que ocorreu durante toda a modernidade.', 1),
 (29, 'Foi consequência da Guerra das Duas Rosas, que eliminou milhares de nobres e facilitou a consolidação da monarquia centralizada.', 0),
 ---------questao 3
-(30, '.foi concedida liberdade de culto aos protestantes, bem como o direito de conservar algumas praças de guerra para sua defesa.', 1),
+(30, 'foi concedida liberdade de culto aos protestantes, bem como o direito de conservar algumas praças de guerra para sua defesa.', 1),
 (30, 'o rei renunciou ao protestantismo e se fez batizar católico.', 0),
 (30, 'revogou a liberdade de culto permitida aos franceses e impôs o catolicismo.', 0),
 (30, 'o rei obteve o direito de nomear bispos e cardeais o que permitiu que a dinastia Bourbon pudesse exercer influência sobre a Igreja Católica.', 0),
@@ -267,7 +267,7 @@ insert into alternativa values
 ---------questao 5
 (32, 'a acreditava que o comércio das coisas sagradas, como os cargos eclesiásticos e as indulgências, traria benefícios para os fiéis e para a sociedade.', 0),
 (32, 'defendia que o trabalho deveria ser valorizado, que o comércio não deveria ser condenado, além de concordar com a cobrança de juros.', 1),
-(32, '.apresentava doutrina que relacionava a salvação eterna do fiel com a frequência aos cultos, com a presença da fé e das obras de caridade.', 0),
+(32, 'apresentava doutrina que relacionava a salvação eterna do fiel com a frequência aos cultos, com a presença da fé e das obras de caridade.', 0),
 (32, 'preconizava o comércio como uma atividade voltada para o sagrado; assim, grande parte do lucro obtido deveria ser doado para os templos religiosos.', 0),
 ---------questao 6
 (33, 'catolicismo medieval.', 0),
@@ -353,6 +353,7 @@ create table jogador
 );
 go
 insert into jogador values
+('caleb', '321', 'email1', 'C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\fonts\imagens\defalt.jpg', 0),
 ('123', '123', 'email', 'C:\Users\Aluno\Documents\GitHub\viagempelotempo\ViagemPeloTempo\ViagemPeloTempo\fonts\imagens\defalt.jpg', 0);
 go
 create table resposta
@@ -376,6 +377,8 @@ inner join alternativa as a on q.idquest = a.idquest
 where q.idquest = 10;
 
 SELECT * FROM jogador where idjogador = 1
+
+select * from resposta 
 
 -- drop table fase
 -- drop table questao

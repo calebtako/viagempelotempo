@@ -38,5 +38,6 @@ namespace ViagemPeloTempo.Controllers
 
             return RedirectToAction("IndexLogin", "Login");
         }
+
     }
 }
