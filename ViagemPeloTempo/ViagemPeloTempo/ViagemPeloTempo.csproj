@@ -222,6 +222,7 @@
     <Content Include="Views\Jogos\PagJogoMe.cshtml" />
     <Content Include="Views\Jogos\PagJogoMo.cshtml" />
     <Content Include="Views\Jogos\PagJogoC.cshtml" />
+    <Content Include="Views\PagInicio\Noticia.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
