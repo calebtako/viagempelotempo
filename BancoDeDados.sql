@@ -376,7 +376,7 @@ SELECT q.texto, a.texto FROM questao as q
 inner join alternativa as a on q.idquest = a.idquest 
 where q.idquest = 10;
 
-SELECT * FROM jogador where idjogador = 1
+select * FROM jogador where idjogador > 2
 
 select * from resposta 
 
