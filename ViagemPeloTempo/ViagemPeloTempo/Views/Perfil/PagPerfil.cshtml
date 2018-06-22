@@ -55,7 +55,7 @@
                         <label>   Email:</label>
                     </div>
                     <div class="col-md-6">
-                        <label>*exemplo@exemplo.com</label>
+                        @Html.Label("lblTexto", string.Format("{0}", Model.Email), new { @class = "label-control" })
                     </div>
                 </div>
             </div>

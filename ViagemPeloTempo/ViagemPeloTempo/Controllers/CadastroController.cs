@@ -20,17 +20,17 @@ namespace ViagemPeloTempo.Controllers
         {
             if (!ValidarEmail(obj.Email))
             {
-                ViewBag.erroMsg("E-mail invalido");
+                ViewBag.ErroMsg("E-mail invalido");
+                return View("IndexCad");
+            }
+            if (obj.Senha != obj.Consenha)
+            {
+                ViewBag.ErroSen("Senha não confirmada");
                 return View("IndexCad");
             }
 
             new JogadorDAO().Inserir(obj);
-
             return RedirectToAction("IndexLogin", "Login");
-
-
-
-
         }
         private bool ValidarEmail(string email)
         {

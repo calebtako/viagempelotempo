@@ -14,8 +14,8 @@ namespace ViagemPeloTempo.DataAccess
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 //Criando instrução sql para inserir na tabela de estados
-                string strSQL = @"INSERT INTO Jogador (nomeusuario, senha, nick, email) 
-                                  VALUES (@nomeusuario, @senha, @nick, @email);";
+                string strSQL = @"INSERT INTO Jogador (nomeusuario, senha, email) 
+                                  VALUES (@nomeusuario, @senha, @email);";
 
                 //Criando um comando sql que será executado na base de dados
                 using (SqlCommand cmd = new SqlCommand(strSQL))
@@ -97,7 +97,7 @@ namespace ViagemPeloTempo.DataAccess
                     cmd.Connection = conn;
                     cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = perfil.Email;
                     cmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = perfil.Senha;
-                    cmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = perfil.NomeUsuario;
+                    cmd.Parameters.Add("@nomeusuario", SqlDbType.VarChar).Value = perfil.NomeUsuario;
                     cmd.CommandText = strSQL;
                     //Executando instrução sql
                     var dataReader = cmd.ExecuteReader();
@@ -115,8 +115,7 @@ namespace ViagemPeloTempo.DataAccess
                         IdUsuario = Convert.ToInt32(row["idjogador"]),
                         NomeUsuario = row["nomeusuario"].ToString(),
                         Email = row["email"].ToString(),
-                        Senha = row["senha"].ToString(),
-                        Administrador = Convert.ToBoolean(row["administrador"])
+                        Senha = row["senha"].ToString()
                     };
 
                     return usuario;
