@@ -18,6 +18,8 @@ namespace ViagemPeloTempo.Controllers
 
         public ActionResult Salvar(Jogador obj)
         {
+            new JogadorDAO().Inserir(obj);      
+
             if (!ValidarEmail(obj.Email))
             {
                 ViewBag.ErroMsg("E-mail invalido");
@@ -28,8 +30,7 @@ namespace ViagemPeloTempo.Controllers
                 ViewBag.ErroSen("Senha não confirmada");
                 return View("IndexCad");
             }
-
-            new JogadorDAO().Inserir(obj);
+            
             return RedirectToAction("IndexLogin", "Login");
         }
         private bool ValidarEmail(string email)
