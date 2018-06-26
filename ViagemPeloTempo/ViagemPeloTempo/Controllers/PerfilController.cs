@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ViagemPeloTempo.Models;
+using ViagemPeloTempo.DataAccess;
 
 namespace ViagemPeloTempo.Controllers
 {
@@ -12,8 +13,10 @@ namespace ViagemPeloTempo.Controllers
     {
         public ActionResult PagPerfil()
         {
+          
             var usuarioId = ((Jogador)User).IdUsuario;
-
+            var jogador = new JogadorDAO();
+            jogador.VerPerfil(usuarioId);
             return View();
         }
     }

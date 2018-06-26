@@ -11,6 +11,7 @@ namespace ViagemPeloTempo.Controllers
     {
         public ActionResult PaginaInicial()
         {
+
             return View();
         }
 

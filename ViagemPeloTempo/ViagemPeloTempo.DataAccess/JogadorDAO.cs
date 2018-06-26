@@ -87,17 +87,13 @@ namespace ViagemPeloTempo.DataAccess
                 //Criando instrução sql para selecionar todos os registros na tabela de usuarios
                 string strSQL = @"SELECT * FROM jogador where idjogador =" + usuarioId;
 
-                Jogador perfil = new Jogador();
-
+  
                 //Criando um comando sql que será executado na base de dados
                 using (SqlCommand cmd = new SqlCommand(strSQL))
                 {
                     //Abrindo conexão com o banco de dados
                     conn.Open();
                     cmd.Connection = conn;
-                    cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = perfil.Email;
-                    cmd.Parameters.Add("@senha", SqlDbType.VarChar).Value = perfil.Senha;
-                    cmd.Parameters.Add("@nomeusuario", SqlDbType.VarChar).Value = perfil.NomeUsuario;
                     cmd.CommandText = strSQL;
                     //Executando instrução sql
                     var dataReader = cmd.ExecuteReader();
@@ -110,7 +106,7 @@ namespace ViagemPeloTempo.DataAccess
                         return null;
 
                     var row = dt.Rows[0];
-                    var usuario = new Jogador()
+                    var perfil = new Jogador()
                     {
                         IdUsuario = Convert.ToInt32(row["idjogador"]),
                         NomeUsuario = row["nomeusuario"].ToString(),
@@ -118,7 +114,7 @@ namespace ViagemPeloTempo.DataAccess
                         Senha = row["senha"].ToString()
                     };
 
-                    return usuario;
+                    return perfil;
                 }
             }
         }

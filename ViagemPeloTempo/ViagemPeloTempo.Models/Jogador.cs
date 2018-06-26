@@ -32,7 +32,7 @@ namespace ViagemPeloTempo.Models
 
         public Jogador()
         {
-
+          
         }
 
         public Jogador(string myEmail)

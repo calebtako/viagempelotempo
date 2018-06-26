@@ -10,7 +10,7 @@
             </div>
             <div class="form-group">
                 <div class="col-md-12 ">
-                    @Html.LabelFor(m => m.NomeUsuario, "Nome Usuário", new { @class = "control-label" })
+                    @Html.Label("lblTexto", string.Format("{0}", Model.NomeUsuario), new { @class = "label-control" })
                     @Html.TextBoxFor(m => m.NomeUsuario, new { @class = "form-control" })
                 </div>
             </div>
