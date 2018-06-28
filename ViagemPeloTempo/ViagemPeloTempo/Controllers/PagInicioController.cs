@@ -16,7 +16,7 @@ namespace ViagemPeloTempo.Controllers
         }
 
         public ActionResult Noticia()
-        {
+        {            
             return View();
         }
 

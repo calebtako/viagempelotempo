@@ -29,6 +29,7 @@ namespace ViagemPeloTempo.Controllers
                 return View("IndexCad");
             }
 
+            ViewBag.Confi = "Cadastro realizadado com sucesso.";
             new JogadorDAO().Inserir(obj);
 
             return RedirectToAction("IndexLogin", "Login");

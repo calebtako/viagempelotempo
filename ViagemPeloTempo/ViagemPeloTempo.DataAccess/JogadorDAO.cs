@@ -68,7 +68,7 @@ namespace ViagemPeloTempo.DataAccess
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 //Criando instrução sql para selecionar todos os registros na tabela de usuarios
-                string strSQL = @"SELECT * FROM jogador where email = @email or senha = @senha;";
+                string strSQL = @"SELECT * FROM jogador where email = @email and senha = @senha;";
 
                 //Criando um comando sql que será executado na base de dados
                 using (SqlCommand cmd = new SqlCommand(strSQL))
@@ -144,5 +144,13 @@ namespace ViagemPeloTempo.DataAccess
                 }
             }
         }
+
+        //public int NumAcertos()
+        //{
+        //    int numAce;
+
+        //    return numAce;
+        //}
+
     }
 }
