@@ -168,8 +168,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\imagens\1_TObLCF8i87mcq-n0AWWEmQ.jpeg" />
+    <Content Include="fonts\imagens\CastlePrison_01.jpg" />
     <Content Include="fonts\imagens\defalt.jpg" />
+    <Content Include="fonts\imagens\download.jpg" />
     <Content Include="fonts\imagens\ftPerfil.JPG" />
+    <Content Include="fonts\imagens\historia-contemporanea.jpg" />
     <Content Include="fonts\imagens\logo.jpg" />
     <Content Include="fonts\imagens\noticia 1.jpg" />
     <Content Include="fonts\imagens\numero2.0.jpg" />
