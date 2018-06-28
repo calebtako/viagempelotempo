@@ -15,24 +15,25 @@ namespace ViagemPeloTempo.Controllers
             return View();
         }
 
-
         public ActionResult Salvar(Jogador obj)
         {
-            new JogadorDAO().Inserir(obj);      
-
             if (!ValidarEmail(obj.Email))
             {
-                ViewBag.ErroMsg("E-mail invalido");
+                ViewBag.ErroMsg = "E-mail invalido";
                 return View("IndexCad");
             }
-            if (obj.Senha != obj.Consenha)
+
+            if (obj.Senha != obj.ConfirmarSenha)
             {
-                ViewBag.ErroSen("Senha não confirmada");
+                ViewBag.ErroMsg = "Senha não confirmada!";
                 return View("IndexCad");
             }
-            
+
+            new JogadorDAO().Inserir(obj);
+
             return RedirectToAction("IndexLogin", "Login");
         }
+
         private bool ValidarEmail(string email)
         {
             if (String.IsNullOrEmpty(email))
@@ -53,6 +54,5 @@ namespace ViagemPeloTempo.Controllers
                 return false;
             return true;
         }
-
     }
 }

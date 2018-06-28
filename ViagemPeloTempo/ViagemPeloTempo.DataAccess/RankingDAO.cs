@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using ViagemPeloTempo.Models;
 
 namespace ViagemPeloTempo.DataAccess
@@ -19,7 +17,9 @@ namespace ViagemPeloTempo.DataAccess
             using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Db"].ConnectionString))
             {
                 //Criando instrução sql para selecionar todos os registros na tabela de estados
-                string strSQL = @"select 
+                string strSQL = @"select
+                                      row_number() over (order by count(r.idalternativa) desc) as posicao,
+	                                  j.idjogador,
 	                                  j.nomeusuario,
 	                                  count(r.idalternativa) as qtd_acertos 
                                   from resposta r 
@@ -27,7 +27,7 @@ namespace ViagemPeloTempo.DataAccess
                                   inner join jogador j on (j.idjogador = r.idjogador)
                                   where a.correta <> 0
                                   and month(r.tempo) = month(getdate())
-                                  group by j.nomeusuario
+                                  group by j.idjogador, j.nomeusuario
                                   having count(r.idalternativa) > 0
                                   order by count(r.idalternativa) desc;";
 
@@ -50,11 +50,13 @@ namespace ViagemPeloTempo.DataAccess
                     {
                         var ranking = new Ranking()
                         {
+                            Posicao = Convert.ToInt32(row["POSICAO"]),
                             Jogador = new Jogador()
                             {
+                                IdUsuario = Convert.ToInt32(row["IDJOGADOR"]),
                                 NomeUsuario = row["NOMEUSUARIO"].ToString()
                             },
-                            Acertos = Convert.ToInt32(row["QTD_ACERTOS"]),
+                            Acertos = Convert.ToInt32(row["QTD_ACERTOS"])
                         };
 
                         lst.Add(ranking);
@@ -74,6 +76,8 @@ namespace ViagemPeloTempo.DataAccess
             {
                 //Criando instrução sql para selecionar todos os registros na tabela de estados
                 string strSQL = @"select 
+                                      row_number() over (order by count(r.idalternativa) desc) as posicao,
+	                                  j.idjogador,
 	                                  j.nomeusuario,
 	                                  count(r.idalternativa) as qtd_acertos 
                                   from resposta r 
@@ -81,7 +85,7 @@ namespace ViagemPeloTempo.DataAccess
                                   inner join jogador j on (j.idjogador = r.idjogador)
                                   where a.correta <> 0
                                   and datepart(week, r.tempo) = datepart(week, getdate())
-                                  group by j.nomeusuario
+                                  group by j.idjogador, j.nomeusuario
                                   having count(r.idalternativa) > 0
                                   order by count(r.idalternativa) desc;";
 
@@ -104,11 +108,13 @@ namespace ViagemPeloTempo.DataAccess
                     {
                         var ranking = new Ranking()
                         {
+                            Posicao = Convert.ToInt32(row["POSICAO"]),
                             Jogador = new Jogador()
                             {
+                                IdUsuario = Convert.ToInt32(row["IDJOGADOR"]),
                                 NomeUsuario = row["NOMEUSUARIO"].ToString()
                             },
-                            Acertos = Convert.ToInt32(row["QTD_ACERTOS"]),
+                            Acertos = Convert.ToInt32(row["QTD_ACERTOS"])
                         };
 
                         lst.Add(ranking);

@@ -7,6 +7,7 @@ namespace ViagemPeloTempo.Models
 {
     public class Ranking
     {
+        public int Posicao { get; set; }
         public Jogador Jogador { get; set; }
         public int Acertos { get; set; }
     }

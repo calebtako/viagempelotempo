@@ -1,47 +1,62 @@
 ﻿@using ViagemPeloTempo.Models
 @model Jogador
 <div class="row">
-    <div class="col-md-4" style="border-right: 3px solid black">
-        <form action="@Url.Action("", "")" class="form-horizontal">
+    <div class="col-md-3" style="border-right: 3px solid black">
+        <form action="@Url.Action("SalvarSenha", "Perfil")" class="form-horizontal">
+            @Html.HiddenFor(m => m.IdUsuario)
             <div class="form-group">
-                <div class="col-md-12">
-                    <img src="~/fonts/imagens/ftPerfil.JPG" />
+                <div class="col-md-12 text-center">
+                    <img class="img-circle" src="@Url.Content("~/fonts/imagens/ftPerfil.JPG")" />
                 </div>
             </div>
+
+            @if (ViewBag.ErroMsg != null)
+            {
+                <div class="form-group">
+                    <div class="col-md-12 text-center">
+                        <div class="alert alert-danger" role="alert">
+                            @ViewBag.ErroMsg
+                        </div>
+                    </div>
+                </div>
+            }
+
             <div class="form-group">
                 <div class="col-md-12 ">
-                    @Html.Label("lblTexto", string.Format("{0}", Model.NomeUsuario), new { @class = "label-control" })
+                    @Html.LabelFor(m => m.NomeUsuario, "Nome do Usuário", new { @class = "control-label" })
                     @Html.TextBoxFor(m => m.NomeUsuario, new { @class = "form-control" })
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-md-12">
                     @Html.LabelFor(m => m.Senha, "Senha Atual", new { @class = "control-label" })
-                    @Html.TextBoxFor(m => m.Senha, new { @class = "form-control" })
+                    @Html.PasswordFor(m => m.Senha, new { @class = "form-control" })
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-md-12">
-                    @Html.LabelFor(m => m.Senha, "Nova Senha", new { @class = "control-label" })
-                    @Html.TextBoxFor(m => m.Senha, new { @class = "form-control" })
+                    @Html.LabelFor(m => m.NovaSenha, "Nova Senha", new { @class = "control-label" })
+                    @Html.PasswordFor(m => m.NovaSenha, new { @class = "form-control" })
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-md-12">
-                    @Html.LabelFor(m => m.Senha, "Confirmar Senha", new { @class = "control-label" })
-                    @Html.TextBoxFor(m => m.Senha, new { @class = "form-control" })
+                    @Html.LabelFor(m => m.ConfirmarSenha, "Confirmar Senha", new { @class = "control-label" })
+                    @Html.PasswordFor(m => m.ConfirmarSenha, new { @class = "form-control" })
                 </div>
             </div>
-            <div class="col-md-12 text-right">
-                <button type="submit" class="btn" style="background-color: #4169E1">Salvar Alteração</button>
+            <div class="form-group">
+                <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-block">Salvar Alteração</button>
+                </div>
             </div>
         </form>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-9">
         <form class="form-horizontal">
             <div class="form-group">
                 <div class="col-md-12 text-center" style="border-bottom: 3px solid black">
-                    <img src="~/fonts/imagens/logo.jpg" />
+                    <img src="@Url.Content("~/fonts/imagens/logo.jpg")" style="padding-bottom: 30px;" />
                 </div>
             </div>
             <div class="form-group">
@@ -50,33 +65,35 @@
                 </div>
             </div>
             <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label>   Email:</label>
-                    </div>
-                    <div class="col-md-6">
-                        @Html.Label("lblTexto", string.Format("{0}", Model.Email), new { @class = "label-control" })
-                    </div>
+                <div class="col-md-6">
+                    <label>E-mail:</label>
+                </div>
+                <div class="col-md-6">
+                    @Html.Label("lblTexto", string.Format("{0}", Model.Email), new { @class = "label-control" })
                 </div>
             </div>
             <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label>   Número de perguntas acertadas:</label>
-                    </div>
-                    <div class="col-md-6">
-                        <label>*30/45</label>
-                    </div>
+                <div class="col-md-6">
+                    <label>Número de perguntas acertadas:</label>
+                </div>
+                <div class="col-md-6">
+                    <label>*30/45</label>
                 </div>
             </div>
             <div class="form-group">
-                <div class="row">
-                    <div class="col-md-6">
-                        <label>   Sua classificação no rank:</label>
-                    </div>
-                    <div class="col-md-6">
-                        <label>*1° semanal/3° mensal</label>
-                    </div>
+                <div class="col-md-6">
+                    <label>Sua classificação no rank semanal:</label>
+                </div>
+                <div class="col-md-6">
+                    <label>@(Model.RankingSemanal)°</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6">
+                    <label>Sua classificação no rank mensal:</label>
+                </div>
+                <div class="col-md-6">
+                    <label>@(Model.RankingMensal)°</label>
                 </div>
             </div>
         </form>

@@ -9,10 +9,15 @@ namespace ViagemPeloTempo.Models
         public int IdUsuario { get; set; }
         public string NomeUsuario { get; set; }
         public string Senha { get; set; }
-        public string Consenha { get; set; }
         public string Email { get; set; }
         public string Imagem { get; set; }
         public bool Administrador { get; set; }
+
+        public string NovaSenha { get; set; }
+        public string ConfirmarSenha { get; set; }
+
+        public int RankingSemanal { get; set; }
+        public int RankingMensal { get; set; }
 
         [ScriptIgnore]
         [IgnoreDataMember]
@@ -32,7 +37,7 @@ namespace ViagemPeloTempo.Models
 
         public Jogador()
         {
-          
+
         }
 
         public Jogador(string myEmail)
